@@ -1,5 +1,5 @@
 ## sort-algorithms-js
-[![build:?](https://travis-ci.org/eyas-ranjous/sort-algorithms-js-js.svg?branch=master)](https://travis-ci.org/eyas-ranjous/sort-algorithms-js) [![npm](https://img.shields.io/npm/v/sort-algorithms-js.svg)](https://www.npmjs.com/package/sort-algorithms-js)
+[![build:?](https://travis-ci.org/eyas-ranjous/sort-algorithms-js.svg?branch=master)](https://travis-ci.org/eyas-ranjous/sort-algorithms-js) [![npm](https://img.shields.io/npm/v/sort-algorithms-js.svg)](https://www.npmjs.com/package/sort-algorithms-js)
 
 Sort algorithms implementation in javascript. Each algorithm sorts an array of numbers of strings.
 
