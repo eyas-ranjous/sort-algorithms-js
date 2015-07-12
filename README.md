@@ -1,9 +1,9 @@
-# sort-algorithms-js
+## sort-algorithms-js
 [![build:?](https://travis-ci.org/eyas-ranjous/sort-algorithms-js-js.svg?branch=master)](https://travis-ci.org/eyas-ranjous/sort-algorithms-js) [![npm](https://img.shields.io/npm/v/sort-algorithms-js.svg)](https://www.npmjs.com/package/sort-algorithms-js)
 
 Sort algorithms implementation in javascript. Each algorithm sorts an array of numbers of strings.
 
-## Implemented algorithms
+### Implemented algorithms
 - Bubble Sort
 - Selection Sort
 - Insertion Sort
@@ -12,12 +12,12 @@ Sort algorithms implementation in javascript. Each algorithm sorts an array of n
 - Merge Sort
 
 
-## Install
+### Install
 ```
 npm install sort-algorithms-js
 ```
 
-## Usage
+### Usage
 ```javascript
 var sorter = require('sort-algorithms-js');
 
@@ -48,17 +48,17 @@ sorter.quickSort(a);
 sorter.mergeSort(a);
 ```
 
-# lint
+### Lint
 ```
 npm run build
 ```
 
 
-# test
+### Test
 ```
 npm run test
 ```
 
 
-## License
+### License
 The MIT License. Full License is [here](https://github.com/eyas-ranjous/sort-algorithms-js/blob/master/LICENSE)
