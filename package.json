@@ -1,13 +1,13 @@
 {
   "name": "sort-algorithms-js",
-  "version": "1.0.0",
-  "description": "sort algorithms implementation in javascript",
+  "version": "0.0.1",
+  "description": "Sort algorithms implementation in javascript. Each algorithm sorts an array of numbers of strings.",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "build": "jshint lib",
+    "build": "jshint ./lib",
     "test": "mocha ./test --recursive"
   },
   "repository": {
@@ -15,7 +15,8 @@
     "url": "https://www.github.com/eyas-ranjous/sort-algorithms-js"
   },
   "author": "Eyas Ranjous <eyas@eyasranjous.info>",
-  "license": "ISC",
+  "license": "MIT",
+  "homepage": "https://github.com/eyas-ranjous/sort-algorithms-js#readme",
   "devDependencies": {
     "chai": "^3.0.0",
     "jshint": "^2.8.0",
