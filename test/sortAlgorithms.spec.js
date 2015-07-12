@@ -3,8 +3,8 @@ var expect = require('chai').expect,
     selectionSort = require('../lib/selectionSort.js'),
     insertionSort = require('../lib/insertionSort.js'),
     heapSort = require('../lib/heapSort.js'),
-    mergeSort = require('../lib/heapSort.js'),
-    quickSort = require('../lib/heapSort.js');
+    mergeSort = require('../lib/mergeSort.js'),
+    quickSort = require('../lib/quickSort.js');
 
 describe('sort alorithms test', function() {
 
