@@ -10,6 +10,15 @@
     "build": "jshint ./lib",
     "test": "mocha ./test --recursive"
   },
+  "keywords": [
+    "javascript sort algorithms",
+    "bubble sort",
+    "insertion sort",
+    "selection sort",
+    "heap sort",
+    "quick sort",
+    "merge sort"
+  ],
   "repository": {
     "type": "git",
     "url": "https://www.github.com/eyas-ranjous/sort-algorithms-js"
