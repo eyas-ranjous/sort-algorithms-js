@@ -1,10 +1,11 @@
-var expect = require('chai').expect,
-    swap = require('../lib/helpers/swap'),
-    getMiddle = require('../lib/helpers/getMiddle'),
-    convertArrayToHeap = require('../lib/helpers/convertArrayToHeap');
-
-
 describe('sort helpers test', function() {
+
+    'use strict';
+
+    var expect = require('chai').expect,
+        swap = require('../lib/helpers/swap'),
+        getMiddle = require('../lib/helpers/getMiddle'),
+        convertArrayToHeap = require('../lib/helpers/convertArrayToHeap');
 
     it('swap test', function() {
         var a = [0, 5, 2, -5, 1];

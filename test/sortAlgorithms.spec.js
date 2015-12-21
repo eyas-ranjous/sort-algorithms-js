@@ -1,14 +1,15 @@
-var expect = require('chai').expect,
-    bubbleSort = require('../lib/bubbleSort.js'),
-    selectionSort = require('../lib/selectionSort.js'),
-    insertionSort = require('../lib/insertionSort.js'),
-    heapSort = require('../lib/heapSort.js'),
-    mergeSort = require('../lib/mergeSort.js'),
-    quickSort = require('../lib/quickSort.js');
-
 describe('sort alorithms test', function() {
 
-    var a1 = [0, 5, 2, -5, 1],
+    'use strict';
+
+    var expect = require('chai').expect,
+        bubbleSort = require('../lib/bubbleSort.js'),
+        selectionSort = require('../lib/selectionSort.js'),
+        insertionSort = require('../lib/insertionSort.js'),
+        heapSort = require('../lib/heapSort.js'),
+        mergeSort = require('../lib/mergeSort.js'),
+        quickSort = require('../lib/quickSort.js'),
+        a1 = [0, 5, 2, -5, 1],
         a2 = [0, 3, 2, -5, 1, 2, -20, 783, -1005, 31, 25, 9, 100, -25, 2, 81, -77, 398, -9, 1289, -102, 115, 84, -956, 142, 326, -489, 65, -84, 127, 30, -28, 12, 10, -7, 2],
         a3 = ['hi', 'b', 'yes', 'know', 'photo', 'last', 'cloud'],
         sortedA1 = [-5, 0, 1, 2, 5],
