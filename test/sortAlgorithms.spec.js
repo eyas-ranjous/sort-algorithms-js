@@ -1,15 +1,11 @@
+var expect = require('chai').expect,
+    sorter = require('../index');
+
 describe('sort alorithms test', function() {
 
     'use strict';
 
-    var expect = require('chai').expect,
-        bubbleSort = require('../lib/bubbleSort.js'),
-        selectionSort = require('../lib/selectionSort.js'),
-        insertionSort = require('../lib/insertionSort.js'),
-        heapSort = require('../lib/heapSort.js'),
-        mergeSort = require('../lib/mergeSort.js'),
-        quickSort = require('../lib/quickSort.js'),
-        a1 = [0, 5, 2, -5, 1],
+    var a1 = [0, 5, 2, -5, 1],
         a2 = [0, 3, 2, -5, 1, 2, -20, 783, -1005, 31, 25, 9, 100, -25, 2, 81, -77, 398, -9, 1289, -102, 115, 84, -956, 142, 326, -489, 65, -84, 127, 30, -28, 12, 10, -7, 2],
         a3 = ['hi', 'b', 'yes', 'know', 'photo', 'last', 'cloud'],
         sortedA1 = [-5, 0, 1, 2, 5],
@@ -24,41 +20,64 @@ describe('sort alorithms test', function() {
         c3 = a3.slice(0);
     });
 
+    it('should get a bubbleSort function', function() {
+        expect(sorter.bubbleSort).to.be.instanceof(Function);
+    });
+
+    it('should get a heapSort function', function() {
+        expect(sorter.heapSort).to.be.instanceof(Function);
+    });
+
+    it('should get a insertionSort function', function() {
+        expect(sorter.insertionSort).to.be.instanceof(Function);
+    });
+
+    it('should get a mergeSort function', function() {
+        expect(sorter.mergeSort).to.be.instanceof(Function);
+    });
+
+    it('should get a quickSort function', function() {
+        expect(sorter.quickSort).to.be.instanceof(Function);
+    });
+
+    it('should get a selectionSort function', function() {
+        expect(sorter.selectionSort).to.be.instanceof(Function);
+    });
+
     it('bubble sort test', function() {
-        expect(bubbleSort(c1)).to.be.eql(sortedA1);
-        expect(bubbleSort(c2)).to.be.eql(sortedA2);
-        expect(bubbleSort(c3)).to.be.eql(sortedA3);
+        expect(sorter.bubbleSort(c1)).to.be.eql(sortedA1);
+        expect(sorter.bubbleSort(c2)).to.be.eql(sortedA2);
+        expect(sorter.bubbleSort(c3)).to.be.eql(sortedA3);
     });
 
     it('selection sort test', function() {
-        expect(selectionSort(c1)).to.be.eql(sortedA1);
-        expect(selectionSort(c2)).to.be.eql(sortedA2);
-        expect(selectionSort(c3)).to.be.eql(sortedA3);
+        expect(sorter.selectionSort(c1)).to.be.eql(sortedA1);
+        expect(sorter.selectionSort(c2)).to.be.eql(sortedA2);
+        expect(sorter.selectionSort(c3)).to.be.eql(sortedA3);
     });
 
     it('insertion sort test', function() {
-        expect(insertionSort(c1)).to.be.eql(sortedA1);
-        expect(insertionSort(c2)).to.be.eql(sortedA2);
-        expect(insertionSort(c3)).to.be.eql(sortedA3);
+        expect(sorter.insertionSort(c1)).to.be.eql(sortedA1);
+        expect(sorter.insertionSort(c2)).to.be.eql(sortedA2);
+        expect(sorter.insertionSort(c3)).to.be.eql(sortedA3);
     });
 
     it('heap sort test', function() {
-        heapSort(c1);
-        expect(heapSort(c1)).to.be.eql(sortedA1);
-        expect(heapSort(c2)).to.be.eql(sortedA2);
-        expect(heapSort(c3)).to.be.eql(sortedA3);
+        expect(sorter.heapSort(c1)).to.be.eql(sortedA1);
+        expect(sorter.heapSort(c2)).to.be.eql(sortedA2);
+        expect(sorter.heapSort(c3)).to.be.eql(sortedA3);
     });
 
     it('merge sort test', function() {
-        expect(mergeSort(c1)).to.be.eql(sortedA1);
-        expect(mergeSort(c2)).to.be.eql(sortedA2);
-        expect(mergeSort(c3)).to.be.eql(sortedA3);
+        expect(sorter.mergeSort(c1)).to.be.eql(sortedA1);
+        expect(sorter.mergeSort(c2)).to.be.eql(sortedA2);
+        expect(sorter.mergeSort(c3)).to.be.eql(sortedA3);
     });
 
     it('quick sort test', function() {
-        expect(quickSort(c1)).to.be.eql(sortedA1);
-        expect(quickSort(c2)).to.be.eql(sortedA2);
-        expect(quickSort(c3)).to.be.eql(sortedA3);
+        expect(sorter.quickSort(c1)).to.be.eql(sortedA1);
+        expect(sorter.quickSort(c2)).to.be.eql(sortedA2);
+        expect(sorter.quickSort(c3)).to.be.eql(sortedA3);
     });
 
 });

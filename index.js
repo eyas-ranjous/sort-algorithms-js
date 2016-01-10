@@ -9,19 +9,16 @@
 
 module.exports = (function() {
 
-    var self = {};
+    var self = {},
+        src = './lib/';
 
-    function getAlgorithm(algorithm) {
-        return require('./lib/' + algorithm);
-    }
-
-    self.bubbleSort = getAlgorithm('bubbleSort');
-    self.insertionSort = getAlgorithm('insertionSort');
-    self.selectionSort = getAlgorithm('selectionSort');
-    self.heapSort = getAlgorithm('heapSort');
-    self.quickSort = getAlgorithm('quickSort');
-    self.mergeSort = getAlgorithm('mergeSort');
+    self.bubbleSort = require(src + 'bubbleSort');
+    self.insertionSort = require(src + 'insertionSort');
+    self.selectionSort = require(src + 'selectionSort');
+    self.heapSort = require(src + 'heapSort');
+    self.quickSort = require(src + 'quickSort');
+    self.mergeSort = require(src + 'mergeSort');
 
     return self;
 
-})();
+}());
