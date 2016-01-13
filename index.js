@@ -7,18 +7,11 @@
 
 'use strict';
 
-module.exports = (function() {
-
-    var self = {},
-        src = './lib/';
-
-    self.bubbleSort = require(src + 'bubbleSort');
-    self.insertionSort = require(src + 'insertionSort');
-    self.selectionSort = require(src + 'selectionSort');
-    self.heapSort = require(src + 'heapSort');
-    self.quickSort = require(src + 'quickSort');
-    self.mergeSort = require(src + 'mergeSort');
-
-    return self;
-
-}());
+module.exports = {
+    bubbleSort: require('./lib/bubbleSort'),
+    insertionSort: require('./lib/insertionSort'),
+    selectionSort: require('./lib/selectionSort'),
+    heapSort: require('./lib/heapSort'),
+    quickSort: require('./lib/quickSort'),
+    mergeSort: require('./lib/mergeSort')
+};
