@@ -23,7 +23,7 @@
     "type": "git",
     "url": "https://www.github.com/eyas-ranjous/sort-algorithms-js"
   },
-  "author": "Eyas Ranjous <eyas@eyasranjous.info>",
+  "author": "Eyas Ranjous <eyas.ranjous@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/eyas-ranjous/sort-algorithms-js#readme",
   "devDependencies": {
