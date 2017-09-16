@@ -1,4 +1,14 @@
 {
     "strict": true,
-    "node": true
+    "node": true,
+    "esversion":6,
+    "globals"   : {
+        /* MOCHA */
+        "describe"   : false,
+        "it"         : false,
+        "before"     : false,
+        "beforeEach" : false,
+        "after"      : false,
+        "afterEach"  : false
+  }
 }
