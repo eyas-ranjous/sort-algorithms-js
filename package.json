@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "jshint ./lib",
-    "test": "mocha ./test --recursive"
+    "test": "mocha ./test/**/*.spec.js"
   },
   "keywords": [
     "javascript sort algorithms",
@@ -27,8 +27,7 @@
   "license": "MIT",
   "homepage": "https://github.com/eyas-ranjous/sort-algorithms-js#readme",
   "devDependencies": {
-    "chai": "^3.0.0",
-    "jshint": "^2.8.0",
-    "mocha": "^2.2.5"
+    "chai": "^3.5.0",
+    "mocha": "^3.4.1"
   }
 }
