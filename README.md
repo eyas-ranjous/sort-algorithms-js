@@ -19,31 +19,30 @@ npm install sort-algorithms-js
 ```javascript
 var sorter = require('sort-algorithms-js');
 
-// sort an array
-var a = [1, 0, 3, -5];
-sorter.bubbleSort(a);
-console.log(a); // [-5, 0, 1, 3]
+let a = [1, 0, 3, -5];
 
-// we can sort a copy of the array to keep the original
-var b = ['y', 'aaa', 'zm', 'w'];
-var sortedB = sorter.bubbleSort(b.slice(0));
-console.log(b); // ['y', 'aaa', 'zm', 'w']
-console.log(sortedB); // ['aaa', 'w', 'y' 'zm']
+// All algorithms mutates the original array except the merge sort
+// All algorithms returns the sorted array
+// to avoid mutation of the original array, sort a copy of the array
+
+let sorted = sorter.bubbleSort(a);
+console.log(a); // [-5, 0, 1, 3]
+console.log(sorted); // [-5, 0, 1, 3]
 
 // selection sort
-sorter.selectionSort(a);
+let sortedArray = sorter.selectionSort(a);
 
 // Insertion sort
-sorter.insertionSort(a);
+let sortedArray = sorter.insertionSort(a);
 
 // heap sort
-sorter.heapSort(a);
+let sortedArray = sorter.heapSort(a);
 
 // quick sort
-sorter.quickSort(a);
+let sortedArray = sorter.quickSort(a);
 
 // merge sort
-sorter.mergeSort(a);
+let sortedArray = sorter.mergeSort(a); // does not mutate a
 ```
 
 ### Lint
