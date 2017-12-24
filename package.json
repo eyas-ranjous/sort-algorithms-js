@@ -1,6 +1,6 @@
 {
   "name": "sort-algorithms-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Sort algorithms implementation in javascript. Each algorithm sorts an array of numbers of strings.",
   "main": "index.js",
   "directories": {
