@@ -1,6 +1,6 @@
 {
   "name": "sort-algorithms-js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Sort algorithms implementation in javascript. Each algorithm sorts an array of numbers of strings.",
   "main": "index.js",
   "directories": {
@@ -11,6 +11,7 @@
     "test": "mocha ./test/**/*.spec.js"
   },
   "keywords": [
+    "sort algorithms",
     "javascript sort algorithms",
     "bubble sort",
     "insertion sort",
