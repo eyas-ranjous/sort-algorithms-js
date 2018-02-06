@@ -1,6 +1,6 @@
 {
   "name": "sort-algorithms-js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Sort algorithms implementation in javascript. Each algorithm sorts an array of numbers of strings.",
   "main": "index.js",
   "directories": {
@@ -11,6 +11,7 @@
     "test": "mocha ./test/**/*.spec.js"
   },
   "keywords": [
+    "sort algorithms",
     "javascript sort algorithms",
     "bubble sort",
     "insertion sort",
@@ -27,7 +28,13 @@
   "license": "MIT",
   "homepage": "https://github.com/eyas-ranjous/sort-algorithms-js#readme",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.4.1"
+    "chai": "^4.1.2",
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-mocha-istanbul": "^5.0.2",
+    "grunt-mocha-test": "^0.13.3",
+    "istanbul": "^0.4.5",
+    "jshint-stylish": "^2.2.1",
+    "mocha": "^5.0.0"
   }
 }

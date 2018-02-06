@@ -1,9 +1,10 @@
 language: node_js
 node_js:
     - "6.0"
+    - "7.0"
+    - "8.0"
 install:
-    - npm install -g jshint
+    - npm install -g grunt-cli
     - npm install
 script:
-    - npm run build
-    - npm run test
+    - grunt build
