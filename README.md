@@ -1,5 +1,5 @@
 ## sort-algorithms-js
-[![build:?](https://travis-ci.org/eyas-ranjous/sort-algorithms-js.svg?branch=master)](https://travis-ci.org/eyas-ranjous/sort-algorithms-js) [![npm](https://img.shields.io/npm/dm/sort-algorithms-js.svg)](https://www.npmjs.com/packages/sort-algorithms-js) [![npm](https://img.shields.io/npm/v/sort-algorithms-js.svg)](https://www.npmjs.com/package/sort-algorithms-js) [![npm](https://img.shields.io/badge/node-%3E=%206.0-blue.svg)](https://www.npmjs.com/package/sort-algorithms-js) 
+[![build:?](https://travis-ci.org/eyas-ranjous/sort-algorithms-js.svg?branch=master)](https://travis-ci.org/eyas-ranjous/sort-algorithms-js) [![npm](https://img.shields.io/npm/dm/sort-algorithms-js.svg)](https://www.npmjs.com/package/sort-algorithms-js) [![npm](https://img.shields.io/npm/v/sort-algorithms-js.svg)](https://www.npmjs.com/package/sort-algorithms-js) [![npm](https://img.shields.io/badge/node-%3E=%206.0-blue.svg)](https://www.npmjs.com/package/sort-algorithms-js) 
 
 ### Algorithms
 - Bubble Sort
@@ -9,42 +9,48 @@
 - Quick Sort
 - Merge Sort
 
-
 ### Install
 ```
 npm install sort-algorithms-js
 ```
 
 ### Usage
-* All algorithms mutates the original array except **merge sort**
-* to avoid mutation of the original array for a mutation algorithm, sort a copy of the array
-* All algorithms returns the sorted array
+All algorithms return a sorted list **without mutating** the original list
+```js
+const sorter = require('sort-algorithms-js');
+
+// OR require a specific algorithm
+
+const { mergeSort } = require('sort-algorithms-js')
+```
 
 **Examples**
 
-```javascript
-var sorter = require('sort-algorithms-js');
+```js
+const a = [1, 0, 3, -5];
 
-let a = [1, 0, 3, -5];
-
-let sorted = sorter.bubbleSort(a);
-console.log(a); // [-5, 0, 1, 3]
-console.log(sorted); // [-5, 0, 1, 3]
+console.log(sorter.bubbleSort(a)); // [-5, 0, 1, 3]
+console.log(a); // [1, 0, 3, -5]
 
 // selection sort
-let sortedArray = sorter.selectionSort(a);
+console.log(sorter.selectionSort(a)); // [-5, 0, 1, 3]
+console.log(a); // [1, 0, 3, -5]
 
 // Insertion sort
-let sortedArray = sorter.insertionSort(a);
+console.log(sorter.insertionSort(a)); // [-5, 0, 1, 3]
+console.log(a); // [1, 0, 3, -5]
 
 // heap sort
-let sortedArray = sorter.heapSort(a);
+console.log(sorter.heapSort(a)); // [-5, 0, 1, 3]
+console.log(a); // [1, 0, 3, -5]
 
 // quick sort
-let sortedArray = sorter.quickSort(a);
+console.log(sorter.quickSort(a)); // [-5, 0, 1, 3]
+console.log(a); // [1, 0, 3, -5]
 
 // merge sort
-let sortedArray = sorter.mergeSort(a); // does not mutate a
+console.log(sorter.mergeSort(a)); // [-5, 0, 1, 3]
+console.log(a); // [1, 0, 3, -5]
 ```
 
 ## Lint
