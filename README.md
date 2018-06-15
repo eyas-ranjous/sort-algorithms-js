@@ -21,36 +21,38 @@ const sorter = require('sort-algorithms-js');
 
 // OR require a specific algorithm
 
-const { mergeSort } = require('sort-algorithms-js')
+const { mergeSort } = require('sort-algorithms-js');
+
+const { bubbleSort, quickSort } = require('sort-algorithms-js');
 ```
 
 **Examples**
 
 ```js
-const a = [1, 0, 3, -5];
+const list = [1, 0, 3, -5];
 
-console.log(sorter.bubbleSort(a)); // [-5, 0, 1, 3]
-console.log(a); // [1, 0, 3, -5]
+console.log(sorter.bubbleSort(list)); // [-5, 0, 1, 3]
+console.log(list); // [1, 0, 3, -5]
 
 // selection sort
-console.log(sorter.selectionSort(a)); // [-5, 0, 1, 3]
-console.log(a); // [1, 0, 3, -5]
+console.log(sorter.selectionSort(list)); // [-5, 0, 1, 3]
+console.log(list); // [1, 0, 3, -5]
 
 // Insertion sort
-console.log(sorter.insertionSort(a)); // [-5, 0, 1, 3]
-console.log(a); // [1, 0, 3, -5]
+console.log(sorter.insertionSort(list)); // [-5, 0, 1, 3]
+console.log(list); // [1, 0, 3, -5]
 
 // heap sort
-console.log(sorter.heapSort(a)); // [-5, 0, 1, 3]
-console.log(a); // [1, 0, 3, -5]
+console.log(sorter.heapSort(list)); // [-5, 0, 1, 3]
+console.log(list); // [1, 0, 3, -5]
 
 // quick sort
-console.log(sorter.quickSort(a)); // [-5, 0, 1, 3]
-console.log(a); // [1, 0, 3, -5]
+console.log(sorter.quickSort(list)); // [-5, 0, 1, 3]
+console.log(list); // [1, 0, 3, -5]
 
 // merge sort
-console.log(sorter.mergeSort(a)); // [-5, 0, 1, 3]
-console.log(a); // [1, 0, 3, -5]
+console.log(sorter.mergeSort(list)); // [-5, 0, 1, 3]
+console.log(list); // [1, 0, 3, -5]
 ```
 
 ## Lint
