@@ -5,6 +5,7 @@
 - Bubble Sort
 - Selection Sort
 - Insertion Sort
+- Radix Sort (numbers only)
 - Heap Sort
 - Quick Sort
 - Merge Sort
@@ -40,6 +41,10 @@ console.log(list); // [1, 0, 3, -5]
 
 // Insertion sort
 console.log(sorter.insertionSort(list)); // [-5, 0, 1, 3]
+console.log(list); // [1, 0, 3, -5]
+
+// Radix sort
+console.log(sorter.radixSort(list)); // [-5, 0, 1, 3]
 console.log(list); // [1, 0, 3, -5]
 
 // heap sort

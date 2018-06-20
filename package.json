@@ -18,7 +18,8 @@
     "selection sort",
     "heap sort",
     "quick sort",
-    "merge sort"
+    "merge sort",
+    "radix sort"
   ],
   "repository": {
     "type": "git",
