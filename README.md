@@ -5,7 +5,7 @@
 - Bubble Sort
 - Selection Sort
 - Insertion Sort
-- Radix Sort (only numbers)
+- Radix Sort (numbers only)
 - Heap Sort
 - Quick Sort
 - Merge Sort
