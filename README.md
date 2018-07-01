@@ -60,23 +60,7 @@ console.log(sorter.mergeSort(list)); // [-5, 0, 1, 3]
 console.log(list); // [1, 0, 3, -5]
 ```
 
-## Lint
-```
-grunt lint
-```
-
-## Test
-```
-grunt test
-```
-
-## Coverage
-```
-grunt coverage
-```
-
 ## Build
-All tasks
 ```
 grunt build
 ```
