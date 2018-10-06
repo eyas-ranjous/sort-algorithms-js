@@ -1,6 +1,6 @@
 {
   "name": "sort-algorithms-js",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "sort algorithms implementation in javascript.",
   "main": "index.js",
   "directories": {
