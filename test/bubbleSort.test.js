@@ -32,6 +32,6 @@ describe('.sort()', () => {
   it('sorts a list of strings in descending order', () => {
     const compare = (a, b) => (a > b ? -1 : 1);
     expect(new BubbleSort(data.strings.t1.unsorted, compare).sort())
-      .to.deep.equal(data.strings.t1.sorted.desc);    
+      .to.deep.equal(data.strings.t1.sorted.desc);
   });
 });

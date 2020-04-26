@@ -20,7 +20,7 @@ class SelectionSort extends SortAlgorithm {
       let selectedIndex = i;
       for (let j = i + 1; j < this._list.length; j += 1) {
         if (this._shouldSwap(selectedIndex, j)) {
-          selectedIndex = j
+          selectedIndex = j;
         }
       }
       if (selectedIndex !== i) {

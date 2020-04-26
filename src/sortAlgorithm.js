@@ -8,7 +8,7 @@
  * @abstract
  * @class SortAlgorithm
  */
- class SortAlgorithm {
+class SortAlgorithm {
   constructor(list, compare) {
     if (!Array.isArray(list)) {
       throw new Error('Sort: invalid array');
@@ -17,7 +17,7 @@
     if (typeof compare === 'function') {
       this._compare = compare;
     } else {
-      this._compare = (a, b) => a > b ? 1 : -1;
+      this._compare = (a, b) => (a > b ? 1 : -1);
     }
   }
 
