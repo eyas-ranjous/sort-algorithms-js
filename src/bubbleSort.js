@@ -16,10 +16,16 @@ class BubbleSort extends SortAlgorithm {
    * @return {array}
    */
   sort() {
-    for (let i = 0; i < this._list.length - 1; i += 1) {
-      for (let j = i + 1; j < this._list.length; j += 1) {
-        if (this._shouldSwap(i, j)) this._swap(i, j);
+    let upperIndex = this._list.length - 1;
+    while (upperIndex > 0) {
+      let swapIndex = 0;
+      for (let i = 0; i < upperIndex; i += 1) {
+        if (this._shouldSwap(i, i + 1)) {
+          this._swap(i, i + 1);
+          swapIndex = i;
+        }
       }
+      upperIndex = swapIndex;
     }
     return this._list;
   }
