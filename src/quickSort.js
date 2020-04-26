@@ -1,5 +1,5 @@
 /**
- * sort-algorithms-js/insertionSort
+ * sort-algorithms-js
  * @copyright 2020 Eyas Ranjous <eyas.ranjous@gmail.com>
  * @license MIT
  */
