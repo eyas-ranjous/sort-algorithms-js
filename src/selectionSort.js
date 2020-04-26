@@ -17,14 +17,14 @@ class SelectionSort extends SortAlgorithm {
    */
   sort() {
     for (let i = 0; i < this._list.length - 1; i += 1) {
-      let swapIndex = i;
+      let selectedIndex = i;
       for (let j = i + 1; j < this._list.length; j += 1) {
-        if (this._shouldSwap(swapIndex, j)) {
-          swapIndex = j
+        if (this._shouldSwap(selectedIndex, j)) {
+          selectedIndex = j
         }
       }
-      if (swapIndex !== i) {
-        this._swap(swapIndex, i);
+      if (selectedIndex !== i) {
+        this._swap(selectedIndex, i);
       }
     }
     return this._list;
