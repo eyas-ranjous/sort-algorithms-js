@@ -21,7 +21,7 @@ class MergeSort extends SortAlgorithm {
 
   /**
    * @private
-   * merges two sorted partitions through swapping elements
+   * merges two sorted partitions using a temporary array
    * @return {array}
    */
   _partitionAndSort(startIndex = 0, endIndex = this._list.length - 1) {
