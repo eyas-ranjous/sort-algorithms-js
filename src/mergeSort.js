@@ -67,7 +67,6 @@ class MergeSort extends SortAlgorithm {
    * @return {array}
    */
   sort() {
-    if (this._list.length <= 1) return this._list;
     this._partitionAndSort();
     return this._list;
   }
