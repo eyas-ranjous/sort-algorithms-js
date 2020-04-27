@@ -22,7 +22,7 @@ class MergeSort extends SortAlgorithm {
   /**
    * @private
    * merges two sorted partitions using a temporary array
-   * @return {array}
+   * @return {array} the start and end of a partition
    */
   _partitionAndSort(startIndex = 0, endIndex = this._list.length - 1) {
     if (endIndex - startIndex <= 0) return [startIndex, startIndex + 1];
