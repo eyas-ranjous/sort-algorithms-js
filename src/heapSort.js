@@ -7,7 +7,7 @@
 const SortAlgorithm = require('./sortAlgorithm');
 
 /**
- * @class InsertionSort
+ * @class HeapSort
  * @extends SortAlgorithm
  */
 class HeapSort extends SortAlgorithm {
