@@ -12,13 +12,13 @@ Sort Algorithms implementation in javascript with ability to use a comparison ca
   * [require](#require)
   * [import](#import)
   * [Examples](#examples)
-    * [bubbleSort](#bubbleSort)
-    * [selectionSort](#selectionSort)
-    * [insertionSort](#insertionSort)
-    * [radixSort](#radixSort)
-    * [heapSort](#heapSort)
-    * [quickSort](#quickSort)
-    * [mergeSort](#mergeSort)
+    * [bubbleSort(list, compare)](#bubbleSortlist-compare)
+    * [selectionSort(list, compare)](#selectionSortlist-compare)
+    * [insertionSort(list, compare)](#insertionSortlist-compare)
+    * [radixSort(list, order, getNumber)](#radixSortlist-order-getnumber)
+    * [heapSort(list, compare)](#heapSortlist-compare)
+    * [quickSort(list, compare)](#quickSortlist-compare)
+    * [mergeSort(list, compare)](#mergeSortlist-compare)
   * [benchmark](#benchmark)
  * [Build](#build)
  * [License](#license)
@@ -86,7 +86,7 @@ const objects = [
 ];
 ```
 
-#### bubbleSort
+#### bubbleSort(list, compare)
 
 ##### asc
 
@@ -114,7 +114,7 @@ console.log(bubbleSort(objects, (a, b) => b.id - a.id));
 // [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
 ```
 
-#### selectionSort
+#### selectionSort(list, compare)
 
 ##### asc
 
@@ -142,7 +142,7 @@ console.log(selectionSort(objects, (a, b) => b.id - a.id));
 // [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
 ```
 
-#### insertionSort
+#### insertionSort(list, compare)
 
 ##### asc
 
@@ -170,7 +170,7 @@ console.log(insertionSort(objects, (a, b) => b.id - a.id));
 // [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
 ```
 
-#### radixSort
+#### radixSort(list, order, getNumber)
 
 ##### asc
 
@@ -192,7 +192,7 @@ console.log(radixSort(objects, 'desc', (a) => a.id));
 // [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
 ```
 
-#### heapSort
+#### heapSort(list, compare)
 
 ```js
 console.log(heapSort(numbers));
@@ -218,7 +218,7 @@ console.log(heapSort(objects, (a, b) => b.id - a.id));
 // [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
 ```
 
-#### quickSort
+#### quickSort(list, compare)
 
 ```js
 console.log(quickSort(numbers));
@@ -244,7 +244,7 @@ console.log(quickSort(objects, (a, b) => b.id - a.id));
 ```
 
 
-#### mergeSort
+#### mergeSort(list, compare)
 
 ```js
 console.log(mergeSort(numbers));
