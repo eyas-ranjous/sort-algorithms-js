@@ -19,14 +19,14 @@ Sort Algorithms implementation in javascript with ability to use a comparison ca
 ## Implemented Algorithms
 
 <table>
-  <tr><th>algorithm</th><th>runtime</th></tr>
-  <tr><td>Bubble Sort</td><td>O(n<sup>2</sup>)</td></tr>
-  <tr><td>Selection Sort</td><td>O(n<sup>2</sup>)</td></tr>
-  <tr><td>Insertion Sort</td><td>O(n<sup>2</sup>)</td></tr>
-  <tr><td>Radix Sort (numbers only)</td><td>O(n*k)</td></tr>
-  <tr><td>Heap Sort</td><td>O(n*log(n))</td></tr>
-  <tr><td>Quick Sort</td><td>O(n*log(n))</td></tr>
-  <tr><td>Merge Sort</td><td>O(n*log(n))</td></tr>
+  <tr><th>algorithm</th><th>source</th></tr>
+  <tr><td>Bubble Sort</td><td>https://en.wikipedia.org/wiki/Bubble_sort</td></tr>
+  <tr><td>Selection Sort</td><td>https://en.wikipedia.org/wiki/Selection_sort</td></tr>
+  <tr><td>Insertion Sort</td><td>https://en.wikipedia.org/wiki/Insertion_sort</td></tr>
+  <tr><td>Radix Sort (numbers only)</td><td>https://en.wikipedia.org/wiki/Radix_sort</td></tr>
+  <tr><td>Heap Sort</td><td>https://en.wikipedia.org/wiki/Heapsort</td></tr>
+  <tr><td>Quick Sort</td><td>https://en.wikipedia.org/wiki/Quicksort</td></tr>
+  <tr><td>Merge Sort</td><td>https://en.wikipedia.org/wiki/Merge_sort</td></tr>
 </table>
 
 ## Install
