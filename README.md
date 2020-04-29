@@ -11,6 +11,7 @@ Sort Algorithms implementation in javascript with ability to use a comparison ca
   * [Implemented Algorithms](#implemented-algorithms)
   * [require](#require)
   * [import](#import)
+  * [Examples](#examples)
   * [benchmark](#benchmark)
  * [Build](#build)
  * [License](#license)
@@ -54,6 +55,10 @@ const Stack = require('@datastructures-js/stack');
 ```js
 import Stack from '@datastructures-js/stack';
 ```
+
+### Examples
+
+### Benchmark
 
 ## Build
 ```
