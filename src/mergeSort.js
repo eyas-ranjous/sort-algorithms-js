@@ -1,0 +1,75 @@
+/**
+ * sort-algorithms-js
+ * @copyright 2020 Eyas Ranjous <eyas.ranjous@gmail.com>
+ * @license MIT
+ */
+
+const CompareSortAlgorithm = require('./compareSortAlgorithm');
+
+/**
+ * @class MergeSort
+ * @extends CompareSortAlgorithm
+ */
+class MergeSort extends CompareSortAlgorithm {
+  /**
+   * @private
+   * @return {number}
+   */
+  _getMiddleIndex(startIndex, endIndex) {
+    return startIndex + Math.floor((endIndex - startIndex) / 2);
+  }
+
+  /**
+   * @private
+   * merges two sorted partitions using a temporary array
+   * @return {array} the start and end of a partition
+   */
+  _partitionAndSort(startIndex = 0, endIndex = this._list.length - 1) {
+    if (endIndex - startIndex <= 0) return [startIndex, startIndex + 1];
+
+    const middleIndex = this._getMiddleIndex(startIndex, endIndex);
+    const leftPartition = this._partitionAndSort(startIndex, middleIndex);
+    const rightPartition = this._partitionAndSort(middleIndex + 1, endIndex);
+
+    const [leftStart, leftEnd] = leftPartition;
+    const [rightStart, rightEnd] = rightPartition;
+    let leftIndex = leftStart;
+    let rightIndex = rightStart;
+    const merged = [];
+    while (leftIndex < leftEnd || rightIndex < rightEnd) {
+      if (rightIndex === rightEnd) {
+        merged.push(this._list[leftIndex]);
+        leftIndex += 1;
+      } else if (leftIndex === leftEnd) {
+        merged.push(this._list[rightIndex]);
+        rightIndex += 1;
+      } else if (this._shouldSwap(leftIndex, rightIndex)) {
+        merged.push(this._list[rightIndex]);
+        rightIndex += 1;
+      } else {
+        merged.push(this._list[leftIndex]);
+        leftIndex += 1;
+      }
+    }
+
+    // update list segment with merged partition
+    let j = 0;
+    for (let i = leftStart; i < rightEnd; i += 1) {
+      this._list[i] = merged[j];
+      j += 1;
+    }
+
+    return [leftStart, rightEnd];
+  }
+
+  /**
+   * @public
+   * @return {array}
+   */
+  sort() {
+    this._partitionAndSort();
+    return this._list;
+  }
+}
+
+module.exports = MergeSort;

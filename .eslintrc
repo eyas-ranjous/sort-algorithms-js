@@ -3,7 +3,12 @@
     max-len: ["error", { "code": 80, "ignoreComments": true }],
     "comma-dangle": ["error", {
       "functions": "ignore"
-    }]
+    }],
+    no-underscore-dangle: [
+      "error",
+      { "allowAfterThis": true }
+    ],
+    "class-methods-use-this": 0
   },
   "env": {
     "mocha": true,
