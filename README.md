@@ -40,7 +40,7 @@ Sort Algorithms implementation in javascript with ability to use a comparison ca
 ## Install
 
 ```sh
-npm install --save @datastructures-js/stack
+npm install --save sort-algorithms-js
 ```
 
 ## API
