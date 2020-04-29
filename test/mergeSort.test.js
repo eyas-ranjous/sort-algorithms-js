@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const data = require('./fixtures/data.json');
 const MergeSort = require('../src/mergeSort');
 
-describe('.sort()', () => {
+describe('merge sort', () => {
   it('should throw an error when list is not an array', () => {
     expect(() => new MergeSort('test').sort()).to.throw(Error)
       .and.to.have.property('message', 'Sort: invalid array');

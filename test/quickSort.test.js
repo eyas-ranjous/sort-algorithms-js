@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const data = require('./fixtures/data.json');
 const QuickSort = require('../src/quickSort');
 
-describe('.sort()', () => {
+describe('quick sort', () => {
   it('should throw an error when list is not an array', () => {
     expect(() => new QuickSort('test').sort()).to.throw(Error)
       .and.to.have.property('message', 'Sort: invalid array');

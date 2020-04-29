@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const data = require('./fixtures/data.json');
 const SelectionSort = require('../src/selectionSort');
 
-describe('.sort()', () => {
+describe('selection sort', () => {
   it('should throw an error when list is not an array', () => {
     expect(() => new SelectionSort('test').sort()).to.throw(Error)
       .and.to.have.property('message', 'Sort: invalid array');

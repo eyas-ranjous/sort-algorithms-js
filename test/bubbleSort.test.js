@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const data = require('./fixtures/data.json');
 const BubbleSort = require('../src/bubbleSort');
 
-describe('.sort()', () => {
+describe('bubble sort', () => {
   it('should throw an error when list is not an array', () => {
     expect(() => new BubbleSort('test').sort()).to.throw(Error)
       .and.to.have.property('message', 'Sort: invalid array');
