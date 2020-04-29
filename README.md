@@ -272,6 +272,21 @@ console.log(mergeSort(objects, (a, b) => b.id - a.id));
 
 ### Benchmark
 
+Here's a benchmark I did in Node v12
+
+<table>
+  <tr><td colspan="2" align="center"><b>100k numbers</b></td></tr>
+  <tr><td>bubble sort</td><td>25 seconds 348 ms</td></tr>
+  <tr><td>selection sort</td><td>51 seconds 687 ms</td></tr>
+  <tr><td>insertion sort</td><td>62 seconds 626 ms</td></tr>
+  <tr><td colspan="2" align="center"><b>10 million numbers</b></td></tr>
+  <tr><td>quick sort</td><td>2 seconds 574 ms</td></tr>
+  <tr><td>heap sort</td><td>6 seconds 86 ms</td></tr>
+  <tr><td>javascript .sort()</td><td>7 seconds 304 ms</td></tr>
+  <tr><td>merge sort</td><td>7 seconds 598 ms</td></tr>
+  <tr><td>radix sort</td><td>16 seconds 877 ms</td></tr>
+</table>
+
 ## Build
 ```
 grunt build
