@@ -73,7 +73,7 @@ import {
 ```
 
 ### Examples
-default order is ascending. all algorithms accept a comparison callback as the second param except radix sort that accept the order as a string "asc" or "decs" and a getNumber callback to obtain a number value from an object.
+default order is ascending. all algorithms accept a comparison callback as the second param except radix sort which accepts the order as a string "asc" or "decs" and a second param callback to obtain a number value from an object.
 
 ```js
 const numbers = [4, 1, 8, 6, -3, -1, 0, 7, -6, 9];
@@ -306,6 +306,13 @@ I also generated a benchmark for larger samples in Node v12, the result was
   <tr><td>javascript .sort()</td><td>7 seconds 304 ms</td></tr>
   <tr><td>merge sort</td><td>7 seconds 598 ms</td></tr>
   <tr><td>radix sort</td><td>16 seconds 877 ms</td></tr>
+  <tr><td colspan="2" align="center"><b>50 million numbers</b></td></tr>
+  <tr><td colspan="2" align="center">node test/benchmark.js -s 50000000 -a quickSort,heapSort,sort</td></tr>
+  <tr><td>quick sort</td><td>13 seconds 983 ms</td></tr>
+  <tr><td>javascript sort</td><td>41 seconds 430 ms</td></tr>
+  <tr><td>heap sort</td><td>48 seconds 787 ms</td></tr>
+  <tr><td colspan="2" align="center"><b>100 million numbers</b></td></tr>
+  <tr><td>quick sort</td><td>36 seconds 147 ms</td></tr>
 </table>
 
 ## Build
