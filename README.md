@@ -22,13 +22,26 @@ Sort Algorithms implementation in javascript with ability to use a comparison ca
 npm install --save @datastructures-js/stack
 ```
 
-- Bubble Sort O(n<sup>2</sup>)
-- Selection Sort O(n<sup>2</sup>)
-- Insertion Sort O(n<sup>2</sup>)
-- Radix Sort (numbers only) O(n\*k)
-- Heap Sort O(n\*log(n))
-- Quick Sort O(n\*log(n))
-- Merge Sort O(n\*log(n))
+## API
+
+## Implemented Algorithms
+
+<table>
+  <tr><th>algorithm</th><th>runtime</th></tr>
+  <tr>Bubble Sort<td></td><td>O(n<sup>2</sup>)</td></tr>
+  <tr>Selection Sort<td></td><td>O(n<sup>2</sup>)</td></tr>
+  <tr>Insertion Sort<td></td><td>O(n<sup>2</sup>)</td></tr>
+  <tr>Radix Sort (numbers only)<td></td><td>O(n\*k)</td></tr>
+  <tr>Heap Sort<td></td><td>O(n\*log(n))</td></tr>
+  <tr>Quick Sort<td></td><td>O(n\*log(n))</td></tr>
+  <tr>Merge Sort<td></td><td>O(n\*log(n))</td></tr>
+</table>
+
+
+## Install
+```
+npm install sort-algorithms-js
+```
 
 ## API
 
@@ -42,14 +55,6 @@ const Stack = require('@datastructures-js/stack');
 
 ```js
 import Stack from '@datastructures-js/stack';
-```
-
-### Algorithms
-
-
-### Install
-```
-npm install sort-algorithms-js
 ```
 
 ## Build
