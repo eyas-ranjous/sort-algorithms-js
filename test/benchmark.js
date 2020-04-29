@@ -4,8 +4,8 @@ const { program } = require('commander');
 const sortAlgorithms = require('../index');
 
 program
-  .option('-s, --size <number>', 'sample size')
-  .option('-a, --algorithms <items>', 'algorithms list');
+  .requiredOption('-s, --size <number>', 'sample size')
+  .requiredOption('-a, --algorithms <items>', 'algorithms list');
 
 const benchmark = (algorithms, size) => {
   if (!Array.isArray(algorithms)) {
