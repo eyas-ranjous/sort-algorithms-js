@@ -3,6 +3,8 @@
 
 Sort Algorithms implementation in javascript with ability to use a comparison callback similar to javascript `.sort`.
 
+<img width="600" alt="sort" src="https://user-images.githubusercontent.com/6517308/80563817-bfe69d80-89b1-11ea-82a7-8d3a7ecddf19.png">
+
 # Table of Contents
 * [Install](#install)
 * [API](#api)
