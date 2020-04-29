@@ -6,9 +6,9 @@
 
 /**
  * @abstract
- * @class SortAlgorithm
+ * @class CompareSortAlgorithm
  */
-class SortAlgorithm {
+class CompareSortAlgorithm {
   constructor(list, compare) {
     if (!Array.isArray(list)) {
       throw new Error('Sort: invalid array');
@@ -39,4 +39,4 @@ class SortAlgorithm {
   }
 }
 
-module.exports = SortAlgorithm;
+module.exports = CompareSortAlgorithm;

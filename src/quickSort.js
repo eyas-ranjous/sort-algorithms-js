@@ -4,13 +4,13 @@
  * @license MIT
  */
 
-const SortAlgorithm = require('./sortAlgorithm');
+const CompareSortAlgorithm = require('./compareSortAlgorithm');
 
 /**
  * @class QuickSort
- * @extends SortAlgorithm
+ * @extends CompareSortAlgorithm
  */
-class QuickSort extends SortAlgorithm {
+class QuickSort extends CompareSortAlgorithm {
   /**
    * @public
    * @return {array}

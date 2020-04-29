@@ -4,13 +4,13 @@
  * @license MIT
  */
 
-const SortAlgorithm = require('./sortAlgorithm');
+const CompareSortAlgorithm = require('./compareSortAlgorithm');
 
 /**
  * @class MergeSort
- * @extends SortAlgorithm
+ * @extends CompareSortAlgorithm
  */
-class MergeSort extends SortAlgorithm {
+class MergeSort extends CompareSortAlgorithm {
   /**
    * @private
    * @return {number}

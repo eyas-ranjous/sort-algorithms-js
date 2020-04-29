@@ -4,13 +4,13 @@
  * @license MIT
  */
 
-const SortAlgorithm = require('./sortAlgorithm');
+const CompareSortAlgorithm = require('./compareSortAlgorithm');
 
 /**
  * @class HeapSort
- * @extends SortAlgorithm
+ * @extends CompareSortAlgorithm
  */
-class HeapSort extends SortAlgorithm {
+class HeapSort extends CompareSortAlgorithm {
   /**
    * @private
    * calculates a parent's index from a child's index
