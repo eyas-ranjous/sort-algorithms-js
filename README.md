@@ -296,6 +296,10 @@ selectionSort: 0 seconds 11 ms
 I also generated a benchmark for larger samples in Node v12, the result was
 
 <table>
+  <tr><td colspan="2" align="center"><b>50k numbers</b></td></tr>
+  <tr><td>bubble sort</td><td>5 seconds 557 ms</td></tr>
+  <tr><td>selection sort</td><td>11 seconds 510 ms</td></tr>
+  <tr><td>insertion sort</td><td>14 seconds 457 ms</td></tr>
   <tr><td colspan="2" align="center"><b>100k numbers</b></td></tr>
   <tr><td>bubble sort</td><td>25 seconds 348 ms</td></tr>
   <tr><td>selection sort</td><td>51 seconds 687 ms</td></tr>
