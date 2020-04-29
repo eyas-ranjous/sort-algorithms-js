@@ -1,6 +1,6 @@
 {
   "name": "sort-algorithms-js",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "sort algorithms implementation in javascript.",
   "main": "index.js",
   "directories": {
@@ -13,6 +13,9 @@
   "keywords": [
     "sort algorithms",
     "javascript sort algorithms",
+    "sort algorithms javascript",
+    "sorting",
+    "sort algorithms js",
     "bubble sort",
     "insertion sort",
     "selection sort",
