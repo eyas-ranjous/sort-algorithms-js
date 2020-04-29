@@ -78,106 +78,106 @@ const strings = ['a', 'y', 'i', 'r', 'o', 'w', 'u', 'd', 'e', 'm'];
 
 ```js
 console.log(bubbleSort(numbers));
-// [-6, -3, -1, 0, 1, 4,  6,  7, 8, 9]
+// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
 
 console.log(bubbleSort(strings));
 // ['a', 'd', 'e', 'i', 'm', 'o', 'r', 'u', 'w', 'y']
 
 console.log(bubbleSort(numbers, (a, b) => b - a));
-// [9, 8,  7,  6,  4, 1, 0, -1, -3, -6]
+// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
 
 console.log(bubbleSort(strings, (a, b) => a < b ? 1 : -1));
-// ['y', 'w', 'u', 'r','o', 'm', 'i', 'e','d', 'a']
+// ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
 ```
 
 #### selectionSort
 
 ```js
 console.log(selectionSort(numbers));
-// [-6, -3, -1, 0, 1, 4,  6,  7, 8, 9]
+// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
 
 console.log(selectionSort(strings));
 // ['a', 'd', 'e', 'i', 'm', 'o', 'r', 'u', 'w', 'y']
 
 console.log(selectionSort(numbers, (a, b) => b - a));
-// [9, 8,  7,  6,  4, 1, 0, -1, -3, -6]
+// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
 
 console.log(selectionSort(strings, (a, b) => a < b ? 1 : -1));
-// ['y', 'w', 'u', 'r','o', 'm', 'i', 'e','d', 'a']
+// ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
 ```
 
 #### insertionSort
 
 ```js
 console.log(insertionSort(numbers));
-// [-6, -3, -1, 0, 1, 4,  6,  7, 8, 9]
+// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
 
 console.log(insertionSort(strings));
 // ['a', 'd', 'e', 'i', 'm', 'o', 'r', 'u', 'w', 'y']
 
 console.log(insertionSort(numbers, (a, b) => b - a));
-// [9, 8,  7,  6,  4, 1, 0, -1, -3, -6]
+// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
 
 console.log(insertionSort(strings, (a, b) => a < b ? 1 : -1));
-// ['y', 'w', 'u', 'r','o', 'm', 'i', 'e','d', 'a']
+// ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
 ```
 
 #### radixSort
 
 ```js
 console.log(radixSort(numbers));
-// [-6, -3, -1, 0, 1, 4,  6,  7, 8, 9]
+// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
 
 console.log(radixSort(numbers, 'desc'));
-// [9, 8,  7,  6,  4, 1, 0, -1, -3, -6]
+// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
 ```
 
 #### heapSort
 
 ```js
 console.log(heapSort(numbers));
-// [-6, -3, -1, 0, 1, 4,  6,  7, 8, 9]
+// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
 
 console.log(heapSort(strings));
 // ['a', 'd', 'e', 'i', 'm', 'o', 'r', 'u', 'w', 'y']
 
 console.log(heapSort(numbers, (a, b) => b - a));
-// [9, 8,  7,  6,  4, 1, 0, -1, -3, -6]
+// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
 
 console.log(heapSort(strings, (a, b) => a < b ? 1 : -1));
-// ['y', 'w', 'u', 'r','o', 'm', 'i', 'e','d', 'a']
+// ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
 ```
 
 #### quickSort
 
 ```js
 console.log(quickSort(numbers));
-// [-6, -3, -1, 0, 1, 4,  6,  7, 8, 9]
+// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
 
 console.log(quickSort(strings));
 // ['a', 'd', 'e', 'i', 'm', 'o', 'r', 'u', 'w', 'y']
 
 console.log(quickSort(numbers, (a, b) => b - a));
-// [9, 8,  7,  6,  4, 1, 0, -1, -3, -6]
+// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
 
 console.log(quickSort(strings, (a, b) => a < b ? 1 : -1));
-// ['y', 'w', 'u', 'r','o', 'm', 'i', 'e','d', 'a']
+// ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
 ```
 
 #### mergeSort
 
 ```js
 console.log(mergeSort(numbers));
-// [-6, -3, -1, 0, 1, 4,  6,  7, 8, 9]
+// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
 
 console.log(mergeSort(strings));
 // ['a', 'd', 'e', 'i', 'm', 'o', 'r', 'u', 'w', 'y']
 
 console.log(mergeSort(numbers, (a, b) => b - a));
-// [9, 8,  7,  6,  4, 1, 0, -1, -3, -6]
+// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
 
 console.log(mergeSort(strings, (a, b) => a < b ? 1 : -1));
-// ['y', 'w', 'u', 'r','o', 'm', 'i', 'e','d', 'a']
+// ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
 ```
 
 ### Benchmark
