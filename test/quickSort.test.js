@@ -1,6 +1,8 @@
 const { expect } = require('chai');
-const data = require('./fixtures/data.json');
+const reload = require('require-reload')(require);
 const QuickSort = require('../src/quickSort');
+
+const data = reload('./fixtures/data.json');
 
 describe('quick sort', () => {
   it('should throw an error when list is not an array', () => {

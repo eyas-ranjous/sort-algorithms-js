@@ -1,6 +1,8 @@
 const { expect } = require('chai');
-const data = require('./fixtures/data.json');
+const reload = require('require-reload')(require);
 const BubbleSort = require('../src/bubbleSort');
+
+const data = reload('./fixtures/data.json');
 
 describe('bubble sort', () => {
   it('should throw an error when list is not an array', () => {
