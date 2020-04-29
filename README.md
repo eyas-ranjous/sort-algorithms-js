@@ -37,23 +37,32 @@ npm install --save @datastructures-js/stack
 
 ## API
 
-## Install
-```
-npm install sort-algorithms-js
-```
-
-## API
-
 ### require
 
 ```js
-const Stack = require('@datastructures-js/stack');
+const {
+  bubbleSort,
+  selectionSort,
+  insertionSort,
+  radixSort,
+  heapSort,
+  quickSort,
+  mergeSort
+} = require('sort-algorithms-js');
 ```
 
 ### import
 
 ```js
-import Stack from '@datastructures-js/stack';
+import {
+  bubbleSort,
+  selectionSort,
+  insertionSort,
+  radixSort,
+  heapSort,
+  quickSort,
+  mergeSort
+} from 'sort-algorithms-js';
 ```
 
 ### Examples
