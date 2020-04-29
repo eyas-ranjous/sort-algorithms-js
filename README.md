@@ -271,8 +271,29 @@ console.log(mergeSort(objects, (a, b) => b.id - a.id));
 ```
 
 ### Benchmark
+I built a small tool to generate a benchmark for the algorithms on a sample of numbers. you can use it in cmd:
 
-Here's a benchmark I did in Node v12
+first install dev deps.
+
+```sh
+npm install
+```
+
+then, run it for an n numbers with a comma-separated algorithms
+
+Example
+
+```sh
+node test/benchmark.js -s 1000 -a bubbleSort,insertionSort,selectionSort
+```
+
+```
+bubbleSort: 0 seconds 7 ms
+insertionSort: 0 seconds 14 ms
+selectionSort: 0 seconds 11 ms
+```
+
+I also generated a benchmark for larger samples in Node v12, the result was
 
 <table>
   <tr><td colspan="2" align="center"><b>100k numbers</b></td></tr>
