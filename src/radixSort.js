@@ -34,7 +34,7 @@ class RadixSort {
     // sort numbers into buckets starting from least significant digit
     for (let i = 0; i < max.toString().length; i += 1) {
       for (let j = 0; j < sorted.length; j += 1) {
-        const n = sorted[j].toString();
+        const n = Math.abs(this._getNumber(sorted[j])).toString();
         const digit = n[n.length - 1 - i] || 0;
         buckets[digit].push(sorted[j]);
       }
@@ -67,12 +67,12 @@ class RadixSort {
         throw new Error(`radix sort: invalid numeric value: ${n}`);
       }
       if (n >= 0) {
-        positive.push(n);
+        positive.push(this._list[i]);
         if (n > maxPositive) {
           maxPositive = n;
         }
       } else {
-        negative.push(-n);
+        negative.push(this._list[i]);
         if (n < minNegative) {
           minNegative = n;
         }
@@ -86,7 +86,7 @@ class RadixSort {
     const sorted = [];
     if (this._order === 'asc') {
       for (let i = sortedNegative.length - 1; i >= 0; i -= 1) {
-        sorted.push(-sortedNegative[i]);
+        sorted.push(sortedNegative[i]);
       }
       for (let i = 0; i < sortedPositive.length; i += 1) {
         sorted.push(sortedPositive[i]);
@@ -96,7 +96,7 @@ class RadixSort {
         sorted.push(sortedPositive[i]);
       }
       for (let i = 0; i < sortedNegative.length; i += 1) {
-        sorted.push(-sortedNegative[i]);
+        sorted.push(sortedNegative[i]);
       }
     }
 
