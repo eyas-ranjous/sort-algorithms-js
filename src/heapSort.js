@@ -47,7 +47,10 @@ class HeapSort extends CompareSortAlgorithm {
    * @return {boolean}
    */
   _shouldSwap(i, j) {
-    return this._compare(this._list[j], this._list[i]) > 0;
+    return i >= 0 && j >= 0
+      && i < this._list.length
+      && j < this._list.length
+      && this._compare(this._list[j], this._list[i]) > 0;
   }
 
   /**
