@@ -195,6 +195,8 @@ console.log(radixSort(objects, 'desc', (a) => a.id));
 
 #### heapSort(list, compare)
 
+##### asc
+
 ```js
 console.log(heapSort(numbers));
 // [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
@@ -221,6 +223,8 @@ console.log(heapSort(objects, (a, b) => b.id - a.id));
 
 #### quickSort(list, compare)
 
+##### asc
+
 ```js
 console.log(quickSort(numbers));
 // [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
@@ -246,6 +250,8 @@ console.log(quickSort(objects, (a, b) => b.id - a.id));
 
 
 #### mergeSort(list, compare)
+
+##### asc
 
 ```js
 console.log(mergeSort(numbers));
@@ -314,7 +320,7 @@ I also generated a benchmark for larger samples in Node v12, the result was
   <tr><td colspan="2" align="center"><b>50 million numbers</b></td></tr>
   <tr><td colspan="2" align="center">node test/benchmark.js -s 50000000 -a quickSort,heapSort,sort</td></tr>
   <tr><td>quick sort</td><td>13 seconds 983 ms</td></tr>
-  <tr><td>javascript sort</td><td>41 seconds 430 ms</td></tr>
+  <tr><td>javascript .sort()</td><td>41 seconds 430 ms</td></tr>
   <tr><td>heap sort</td><td>48 seconds 787 ms</td></tr>
   <tr><td colspan="2" align="center"><b>100 million numbers</b></td></tr>
   <tr><td>quick sort</td><td>36 seconds 147 ms</td></tr>
