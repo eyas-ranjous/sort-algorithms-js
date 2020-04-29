@@ -8,7 +8,7 @@
  * @class RadixSort
  */
 class RadixSort {
-  constructor(list, order) {
+  constructor(list, order, getNumber) {
     if (!Array.isArray(list)) {
       throw new Error('Sort: invalid array');
     }
@@ -17,8 +17,13 @@ class RadixSort {
       throw new Error('radix sort: order is either "asc" or "desc"');
     }
 
+    if (getNumber && typeof getNumber !== 'function') {
+      throw new Error('radix sort: invalid getNumber callback');
+    }
+
     this._list = list;
     this._order = order || 'asc';
+    this._getNumber = getNumber || ((n) => n);
   }
 
   _sortPartition(numbers, max) {
@@ -56,7 +61,8 @@ class RadixSort {
     let maxPositive = -Infinity;
     let minNegative = Infinity;
 
-    this._list.forEach((n) => {
+    for (let i = 0; i < this._list.length; i += 1) {
+      const n = this._getNumber(this._list[i]);
       if (Number.isNaN(+n)) {
         throw new Error(`radix sort: invalid numeric value: ${n}`);
       }
@@ -71,7 +77,7 @@ class RadixSort {
           minNegative = n;
         }
       }
-    });
+    }
 
     const sortedPositive = this._sortPartition(positive, maxPositive);
     const sortedNegative = this._sortPartition(negative, -minNegative);

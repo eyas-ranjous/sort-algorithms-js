@@ -1,6 +1,8 @@
 const { expect } = require('chai');
-const data = require('./fixtures/data.json');
+const reload = require('require-reload')(require);
 const RadixSort = require('../src/radixSort');
+
+const data = reload('./fixtures/data.json');
 
 describe('radix sort', () => {
   it('should throw an error when list is not an array', () => {
@@ -15,7 +17,12 @@ describe('radix sort', () => {
 
   it('throw an error when trying to sort string list', () => {
     expect(() => new RadixSort(data.strings.t1.unsorted).sort())
-      .to.throw(Error, 'radix sort: invalid numeric value: yes');
+      .to.throw(Error, 'radix sort: invalid numeric value: hi');
+  });
+
+  it('throw an error if getNumber callback is invalid', () => {
+    expect(() => new RadixSort(data.strings.t1.unsorted, 'asc', 'test').sort())
+      .to.throw(Error, 'radix sort: invalid getNumber callback');
   });
 
   it('sorts a list of numbers in ascending order', () => {
