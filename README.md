@@ -20,10 +20,10 @@ Sort Algorithms implementation in javascript with ability to use a comparison ca
   <tr><td>Bubble Sort</td><td>O(n<sup>2</sup>)</td></tr>
   <tr><td>Selection Sort</td><td>O(n<sup>2</sup>)</td></tr>
   <tr><td>Insertion Sort</td><td>O(n<sup>2</sup>)</td></tr>
-  <tr><td>Radix Sort (numbers only)</td><td>O(n\*k)</td></tr>
-  <tr><td>Heap Sort</td><td>O(n\*log(n))</td></tr>
-  <tr><td>Quick Sort</td><td>O(n\*log(n))</td></tr>
-  <tr><td>Merge Sort</td><td>O(n\*log(n))</td></tr>
+  <tr><td>Radix Sort (numbers only)</td><td>O(n*k)</td></tr>
+  <tr><td>Heap Sort</td><td>O(n*log(n))</td></tr>
+  <tr><td>Quick Sort</td><td>O(n*log(n))</td></tr>
+  <tr><td>Merge Sort</td><td>O(n*log(n))</td></tr>
 </table>
 
 ## Install
