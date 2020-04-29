@@ -103,7 +103,7 @@ console.log(bubbleSort(numbers, (a, b) => b - a));
 console.log(bubbleSort(strings, (a, b) => a < b ? 1 : -1));
 // ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
 
-console.log(bubbleSort(objects, (a, b) => a.id - b.id));
+console.log(bubbleSort(objects, (a, b) => b.id - a.id));
 // [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
 ```
 
@@ -131,7 +131,7 @@ console.log(selectionSort(numbers, (a, b) => b - a));
 console.log(selectionSort(strings, (a, b) => a < b ? 1 : -1));
 // ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
 
-console.log(selectionSort(objects, (a, b) => a.id - b.id));
+console.log(selectionSort(objects, (a, b) => b.id - a.id));
 // [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
 ```
 
@@ -159,7 +159,7 @@ console.log(insertionSort(numbers, (a, b) => b - a));
 console.log(insertionSort(strings, (a, b) => a < b ? 1 : -1));
 // ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
 
-console.log(insertionSort(objects, (a, b) => a.id - b.id));
+console.log(insertionSort(objects, (a, b) => b.id - a.id));
 // [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
 ```
 
@@ -174,10 +174,11 @@ console.log(radixSort(numbers));
 console.log(radixSort(objects, 'asc', (a) => a.id));
 // [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }]
 ```
+
 ##### desc
 
 ```js
-console.log(radixSort(numbers, 'desc');
+console.log(radixSort(numbers, 'desc'));
 // [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
 
 console.log(radixSort(objects, 'desc', (a) => a.id));
@@ -196,6 +197,7 @@ console.log(heapSort(strings));
 console.log(heapSort(objects, (a, b) => a.id - b.id));
 // [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }]
 ```
+
 ##### desc
 
 ```js
@@ -205,7 +207,7 @@ console.log(heapSort(numbers, (a, b) => b - a));
 console.log(heapSort(strings, (a, b) => a < b ? 1 : -1));
 // ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
 
-console.log(heapSort(objects, (a, b) => a.id - b.id));
+console.log(heapSort(objects, (a, b) => b.id - a.id));
 // [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
 ```
 
@@ -230,7 +232,7 @@ console.log(quickSort(numbers, (a, b) => b - a));
 console.log(quickSort(strings, (a, b) => a < b ? 1 : -1));
 // ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
 
-console.log(quickSort(objects, (a, b) => a.id - b.id));
+console.log(quickSort(objects, (a, b) => b.id - a.id));
 // [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
 ```
 
@@ -247,6 +249,7 @@ console.log(mergeSort(strings));
 console.log(mergeSort(objects, (a, b) => a.id - b.id));
 // [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }]
 ```
+
 ##### desc
 
 ```js
@@ -256,7 +259,7 @@ console.log(mergeSort(numbers, (a, b) => b - a));
 console.log(mergeSort(strings, (a, b) => a < b ? 1 : -1));
 // ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
 
-console.log(mergeSort(objects, (a, b) => a.id - b.id));
+console.log(mergeSort(objects, (a, b) => b.id - a.id));
 // [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
 ```
 
