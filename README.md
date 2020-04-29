@@ -286,7 +286,7 @@ first install dev deps.
 npm install
 ```
 
-then, run it for an n numbers with a comma-separated algorithms
+then, run it for an n randomly generated numbers with a comma-separated algorithms
 
 Example
 
