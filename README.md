@@ -382,7 +382,7 @@ grunt build
 ```
 
 ## Collaboration
-I welcome every collaboration in the project whether in improving what is implmented or adding new algorithms. Simply fork the repo to your github and and push your code. It just has to be consistent with the existing code structure and style, and deliver tested and documented solution. Once done, open a PR from development branch. Thanks!
+I welcome every collaboration in the project whether in improving what is implmented or adding new algorithms. Simply fork the repo to your github and push your code. It just has to be consistent with the existing code structure and style, and deliver tested and documented solution. Once done, open a PR from development branch. Thanks!
 
 ### License
 The MIT License. Full License is [here](https://github.com/eyas-ranjous/sort-algorithms-js/blob/master/LICENSE)
