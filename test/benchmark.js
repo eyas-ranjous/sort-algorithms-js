@@ -5,46 +5,43 @@ const sortAlgorithms = require('../index');
 
 program
   .requiredOption('-s, --size <number>', 'sample size')
-  .requiredOption('-a, --algorithms <items>', 'algorithms list');
+  .requiredOption('-a, --algorithm <string>', 'algorithm name')
+  .option('-i, --iterations <number>', 'number of iterations');
 
-const benchmark = (algorithms, size) => {
-  if (!Array.isArray(algorithms)) {
-    throw new Error(`invalid algorithms list`);
+const benchmark = (algorithm, size, iterations) => {
+  if (!algorithm) {
+    throw new Error(`missing algorithm name`);
   }
 
-  if (size <= 0) {
+  if (+size <= 0) {
     throw new Error(`invalid sample size`);
   }
 
-  const result = [];
-  const list = [];
-
-  for (let i = 0; i < size; i += 1) {
-    list.push(Math.floor(Math.random() * size));
+  if (!sortAlgorithms[algorithm] && !algorithm === 'sort') {
+    throw new Error(`invalid algorithm ${algorithm}`);
   }
 
-  algorithms.forEach((algorithm) => {
-    if (!sortAlgorithms[algorithm] && !algorithm === 'sort') {
-      throw new Error(`invalid algorithm ${algorithm}`);
+  const itr = +iterations || 1;
+  const result = [];
+  for (let i = 0; i < itr; i += 1) {
+    const list = [];
+    for (let i = 0; i < size; i += 1) {
+      list.push(Math.floor(Math.random() * size));
     }
-    const listClone = list.slice(0);
     const timer = new Timer(algorithm);
-
     timer.start();
     if (algorithm === 'sort') {
-      listClone.sort();
+      list.sort();
     } else {
-      sortAlgorithms[algorithm](listClone);
+      sortAlgorithms[algorithm](list);
     }
     timer.stop();
     result.push(timer.format('%lbl: %s seconds %ms ms'));
-  });
+  }
   return result;
 };
 
-const { size, algorithms } = program.parse(process.argv);
+const { size, algorithm, iterations } = program.parse(process.argv);
 
-const result = benchmark(algorithms.split(','), +size);
-
-result.forEach((r) => console.log(r));
+benchmark(algorithm, +size, +iterations).forEach((r) => console.log(r));
 
