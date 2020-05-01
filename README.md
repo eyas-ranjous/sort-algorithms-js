@@ -318,6 +318,7 @@ and I took the best and worst recorded time of each 10 iterations. the result wa
 
 <table>
   <tr><td colspan="3" align="center"><b>10k numbers</b></td></tr>
+  <tr><td align="center"><b>algorithm</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
   <tr><td>quick sort</td><td>0 seconds 2 ms</td><td>0 seconds 11 ms</td></tr>
   <tr><td>javascript sort</td><td>0 seconds 4 ms</td><td>0 seconds 13 ms</td></tr>
   <tr><td>merge sort</td><td>0 seconds 3 ms</td><td>0 seconds 20 ms</td></tr>
