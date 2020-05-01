@@ -22,6 +22,7 @@ Sort Algorithms implementation in javascript with ability to use a comparison ca
     * [mergeSort(list, compare)](#mergeSortlist-compare)
   * [benchmark](#benchmark) ⭐
  * [Build](#build)
+ * [Collaboration](#collaboration) 🤝
  * [License](#license)
 
 ## Implemented Algorithms
@@ -379,6 +380,9 @@ and I took the best and worst recorded time of each 10 iterations. the result wa
 ```
 grunt build
 ```
+
+## Collaboration
+I welcome every collaboration in the project whether in improving what is implmented or adding new algorithms. Simply fork the repo to your github and code your ideas. They just has to be consistent with the existing code structure and style, and deliver tested and documented solution. Once done, open a PR from development branch. Thanks!
 
 ### License
 The MIT License. Full License is [here](https://github.com/eyas-ranjous/sort-algorithms-js/blob/master/LICENSE)
