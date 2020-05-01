@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.3] - 2020-04-30
+### Fixed
+- README.
+- RadixSort - reduce code.
+- Benchmark - improved script and benchmark data.
+
 ## [3.0.2] - 2020-04-29
 ### Fixed
 - README.

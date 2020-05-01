@@ -39,9 +39,9 @@ class RadixSort {
         buckets[digit].push(sorted[j]);
       }
 
-      const temp = [];
+      let temp = [];
       buckets.forEach((bucket, digit) => {
-        bucket.forEach((n) => temp.push(n));
+        temp = temp.concat(bucket);
         buckets[digit] = [];
       });
 
@@ -84,23 +84,21 @@ class RadixSort {
 
     // merge sorted numbers
     const sorted = [];
-    if (this._order === 'asc') {
-      for (let i = sortedNegative.length - 1; i >= 0; i -= 1) {
-        sorted.push(sortedNegative[i]);
-      }
-      for (let i = 0; i < sortedPositive.length; i += 1) {
-        sorted.push(sortedPositive[i]);
-      }
-    } else {
-      for (let i = sortedPositive.length - 1; i >= 0; i -= 1) {
-        sorted.push(sortedPositive[i]);
-      }
-      for (let i = 0; i < sortedNegative.length; i += 1) {
-        sorted.push(sortedNegative[i]);
-      }
+    const first = this._order === 'asc' ? sortedNegative : sortedPositive;
+    const second = this._order === 'asc' ? sortedPositive : sortedNegative;
+
+    for (let i = first.length - 1; i >= 0; i -= 1) {
+      sorted.push(first[i]);
+    }
+    for (let i = 0; i < second.length; i += 1) {
+      sorted.push(second[i]);
     }
 
-    return sorted;
+    sorted.forEach((n, i) => {
+      this._list[i] = n;
+    });
+
+    return this._list;
   }
 }
 
