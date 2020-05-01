@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.5] - 2020-05-01
+### Fixed
+- README - collaboration
+
 ## [3.0.4] - 2020-05-01
 ### Fixed
 - README - improved benchmark data.
