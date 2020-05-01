@@ -320,7 +320,7 @@ and I took the best and worst recorded time of each 10 iterations. the result wa
   <tr><td colspan="3" align="center"><b>10k numbers</b></td></tr>
   <tr><td align="center"><b>algorithm</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
   <tr><td>quick sort</td><td>0 seconds 2 ms</td><td>0 seconds 11 ms</td></tr>
-  <tr><td>javascript sort</td><td>0 seconds 4 ms</td><td>0 seconds 13 ms</td></tr>
+  <tr><td>javascript .sort()</td><td>0 seconds 4 ms</td><td>0 seconds 13 ms</td></tr>
   <tr><td>merge sort</td><td>0 seconds 3 ms</td><td>0 seconds 20 ms</td></tr>
   <tr><td>radix sort</td><td>0 seconds 3 ms</td><td>0 seconds 44 ms</td></tr>
   <tr><td>selection sort</td><td>5 seconds 316 ms</td><td>14 seconds 836 ms</td></tr>
@@ -328,7 +328,7 @@ and I took the best and worst recorded time of each 10 iterations. the result wa
   <tr><td>bubble sort</td><td>7 seconds 304 ms</td><td>20 seconds 666 ms</td></tr>
   <tr><td colspan="3" align="center"><b>50k numbers</b></td></tr>
   <tr><td align="center"><b>algorithm</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
-  <tr><td>javascript sort</td><td>0 seconds 18 ms</td><td>0 seconds 22 ms</td></tr>
+  <tr><td>javascript .sort()</td><td>0 seconds 18 ms</td><td>0 seconds 22 ms</td></tr>
   <tr><td>quick sort</td><td>0 seconds 13 ms</td><td>0 seconds 27 ms</td></tr>
   <tr><td>merge sort</td><td>0 seconds 19 ms</td><td>0 seconds 48 ms</td></tr>
   <tr><td>radix sort</td><td>0 seconds 40 ms</td><td>0 seconds 84 ms</td></tr>
@@ -338,7 +338,7 @@ and I took the best and worst recorded time of each 10 iterations. the result wa
   <tr><td colspan="3" align="center"><b>100k numbers</b></td></tr>
   <tr><td align="center"><b>algorithm</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
   <tr><td>quick sort</td><td>0 seconds 29 ms</td><td>0 seconds 40 ms</td></tr>
-  <tr><td>javascript sort</td><td>0 seconds 41 ms</td><td>0 seconds 46 ms</td></tr>
+  <tr><td>javascript .sort()</td><td>0 seconds 41 ms</td><td>0 seconds 46 ms</td></tr>
   <tr><td>merge sort</td><td>0 seconds 43 ms</td><td>0 seconds 74 ms</td></tr>
   <tr><td>radix sort</td><td>0 seconds 84 ms</td><td>0 seconds 124 ms</td></tr>
   <tr><td>selection sort</td><td>11 seconds 604 ms</td><td>63 seconds 19 ms</td></tr>
