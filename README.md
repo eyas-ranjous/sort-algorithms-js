@@ -317,13 +317,29 @@ node test/benchmark.js -s [s] -a [name] -i 10
 and I took the best and worst recorded time of each 10 iterations. the result was:
 
 <table>
+  <tr><td colspan="3" align="center"><b>10k numbers</b></td></tr>
+  <tr><td>quick sort</td><td>0 seconds 2 ms</td><td>0 seconds 11 ms</td></tr>
+  <tr><td>javascript sort</td><td>0 seconds 4 ms</td><td>0 seconds 13 ms</td></tr>
+  <tr><td>merge sort</td><td>0 seconds 3 ms</td><td>0 seconds 20 ms</td></tr>
+  <tr><td>radix sort</td><td>0 seconds 3 ms</td><td>0 seconds 44 ms</td></tr>
+  <tr><td>selection sort</td><td>5 seconds 316 ms</td><td>14 seconds 836 ms</td></tr>
+  <tr><td>insertion sort</td><td>4 seconds 397 ms</td><td>15 seconds 918 ms</td></tr>
+  <tr><td>bubble sort</td><td>7 seconds 304 ms</td><td>20 seconds 666 ms</td></tr>
   <tr><td colspan="3" align="center"><b>50k numbers</b></td></tr>
   <tr><td align="center"><b>algorithm</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
+  <tr><td>javascript sort</td><td>0 seconds 18 ms</td><td>0 seconds 22 ms</td></tr>
+  <tr><td>quick sort</td><td>0 seconds 13 ms</td><td>0 seconds 27 ms</td></tr>
+  <tr><td>merge sort</td><td>0 seconds 19 ms</td><td>0 seconds 48 ms</td></tr>
+  <tr><td>radix sort</td><td>0 seconds 40 ms</td><td>0 seconds 84 ms</td></tr>
   <tr><td>selection sort</td><td>5 seconds 316 ms</td><td>14 seconds 836 ms</td></tr>
   <tr><td>insertion sort</td><td>4 seconds 397 ms</td><td>15 seconds 918 ms</td></tr>
   <tr><td>bubble sort</td><td>7 seconds 304 ms</td><td>20 seconds 666 ms</td></tr>
   <tr><td colspan="3" align="center"><b>100k numbers</b></td></tr>
   <tr><td align="center"><b>algorithm</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
+  <tr><td>quick sort</td><td>0 seconds 29 ms</td><td>0 seconds 40 ms</td></tr>
+  <tr><td>javascript sort</td><td>0 seconds 41 ms</td><td>0 seconds 46 ms</td></tr>
+  <tr><td>merge sort</td><td>0 seconds 43 ms</td><td>0 seconds 74 ms</td></tr>
+  <tr><td>radix sort</td><td>0 seconds 84 ms</td><td>0 seconds 124 ms</td></tr>
   <tr><td>selection sort</td><td>11 seconds 604 ms</td><td>63 seconds 19 ms</td></tr>
   <tr><td>insertion sort</td><td>19 seconds 370 ms</td><td>70 seconds 463 ms</td></tr>
   <tr><td>bubble sort</td><td>33 seconds 793 ms</td><td>80 seconds 753 ms</td></tr>
@@ -336,8 +352,8 @@ and I took the best and worst recorded time of each 10 iterations. the result wa
   <tr><td>radix sort</td><td>1 seconds 117 ms</td><td>1 seconds 493 ms</td></tr>
   <tr><td colspan="3" align="center"><b>10 million numbers</b></td></tr>
   <tr><td align="center"><b>algorithm</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
-  <tr><td>quick sort</td><td>2 seconds 212 ms</td><td>2 seconds 723 ms</td></tr>
   <tr><td>javascript .sort()</td><td>6 seconds 656 ms</td><td>8 seconds 226 ms</td></tr>
+  <tr><td>quick sort</td><td>2 seconds 212 ms</td><td>11 seconds 236 ms</td></tr>
   <tr><td>merge sort</td><td>6 seconds 795 ms</td><td>12 seconds 164 ms</td></tr>
   <tr><td>heap sort</td><td>5 seconds 194 ms</td><td>17 seconds 663 ms</td></tr>
   <tr><td>radix sort</td><td>18 seconds 134 ms</td><td>27 seconds 387 ms</td></tr>
@@ -356,6 +372,7 @@ and I took the best and worst recorded time of each 10 iterations. the result wa
   <tr><td>merge sort</td><td colspan="2"><i>❌ JavaScript heap out of memory</i></td></tr>
   <tr><td>radix sort</td><td colspan="2"><i>❌ JavaScript heap out of memory</i></td></tr>
 </table>
+
 
 ## Build
 ```
