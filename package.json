@@ -1,7 +1,7 @@
 {
   "name": "sort-algorithms-js",
   "version": "3.0.3",
-  "description": "sort algorithms implementation in javascript.",
+  "description": "production-ready sort algorithms implementation in javascript.",
   "main": "index.js",
   "directories": {
     "test": "test"
