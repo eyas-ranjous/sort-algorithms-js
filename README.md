@@ -23,7 +23,7 @@ Sort Algorithms implementation in javascript with ability to use a comparison ca
   * [require](#require)
   * [import](#import)
   * [Usage](#usage)
-  * [benchmark](#benchmark) ⭐
+  * ⭐ [benchmark](#benchmark) 
   * [Build](#build)
   * [License](#license)
 
