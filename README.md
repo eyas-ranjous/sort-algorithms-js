@@ -4,7 +4,7 @@
 
 Sort Algorithms implementation in javascript with ability to use a comparison callback similar to javascript `.sort`.
 
-<img width="782" alt="sa" src="https://user-images.githubusercontent.com/6517308/80630484-e93b1400-8a19-11ea-836f-58594fc7b1d1.png">
+<img width="900" alt="sort" src="https://user-images.githubusercontent.com/6517308/101267767-1ffca980-3722-11eb-9041-f4b272baadb5.png">
 
 ## Implemented Algorithms
 
