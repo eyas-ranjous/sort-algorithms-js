@@ -77,9 +77,9 @@ const objects = [
 ];
 ```
 
-Examples
+#### Examples
 
-#### mergeSort
+##### mergeSort
 
 * asc
 
@@ -107,7 +107,7 @@ console.log(mergeSort(objects, (a, b) => b.id - a.id));
 // [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
 ```
 
-#### radixSort
+##### radixSort
 
 * asc
 
