@@ -6,17 +6,6 @@ Sort Algorithms implementation in javascript with ability to use a comparison ca
 
 <img width="782" alt="sa" src="https://user-images.githubusercontent.com/6517308/80630484-e93b1400-8a19-11ea-836f-58594fc7b1d1.png">
 
-# Table of Contents
-* [Install](#install)
-* [API](#api)
-  * [Implemented Algorithms](#implemented-algorithms)
-  * [require](#require)
-  * [import](#import)
-  * [Usage](#usage)
-  * [benchmark](#benchmark) ⭐
- * [Build](#build)
- * [License](#license)
-
 ## Implemented Algorithms
 
 <table>
@@ -29,15 +18,25 @@ Sort Algorithms implementation in javascript with ability to use a comparison ca
   <tr><td>Merge Sort</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/development/src/mergeSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Merge_sort">Wikipedia</a></td></tr>
 </table>
 
-## Install
+## Table of Contents
+* [Install](#install)
+* [API](#api)
+  * [require](#require)
+  * [import](#import)
+  * [Usage](#usage)
+  * [benchmark](#benchmark) ⭐
+ * [Build](#build)
+ * [License](#license)
+
+### Install
 
 ```sh
 npm install --save sort-algorithms-js
 ```
 
-## API
+### API
 
-### require
+#### require
 
 ```js
 const {
@@ -51,7 +50,7 @@ const {
 } = require('sort-algorithms-js');
 ```
 
-### import
+#### import
 
 ```js
 import {
@@ -77,196 +76,6 @@ const objects = [
   { id: 4 }, { id: 1 }, { id: 8 }, { id: 6 }, { id: 3 },
   { id: 2 }, { id: 0 },{ id: 7 }, { id: 5 }, { id: 9 }
 ];
-```
-
-#### bubbleSort(list[, compare])
-
-##### asc
-
-```js
-console.log(bubbleSort(numbers));
-// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
-
-console.log(bubbleSort(strings));
-// ['a', 'd', 'e', 'i', 'm', 'o', 'r', 'u', 'w', 'y']
-
-console.log(bubbleSort(objects, (a, b) => a.id - b.id));
-// [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }]
-```
-
-##### desc
-
-```js
-console.log(bubbleSort(numbers, (a, b) => b - a));
-// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
-
-console.log(bubbleSort(strings, (a, b) => a < b ? 1 : -1));
-// ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
-
-console.log(bubbleSort(objects, (a, b) => b.id - a.id));
-// [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
-```
-
-#### selectionSort(list[, compare])
-
-##### asc
-
-```js
-console.log(selectionSort(numbers));
-// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
-
-console.log(selectionSort(strings));
-// ['a', 'd', 'e', 'i', 'm', 'o', 'r', 'u', 'w', 'y']
-
-console.log(selectionSort(objects, (a, b) => a.id - b.id));
-// [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }]
-```
-
-##### desc
-
-```js
-console.log(selectionSort(numbers, (a, b) => b - a));
-// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
-
-console.log(selectionSort(strings, (a, b) => a < b ? 1 : -1));
-// ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
-
-console.log(selectionSort(objects, (a, b) => b.id - a.id));
-// [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
-```
-
-#### insertionSort(list[, compare])
-
-##### asc
-
-```js
-console.log(insertionSort(numbers));
-// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
-
-console.log(insertionSort(strings));
-// ['a', 'd', 'e', 'i', 'm', 'o', 'r', 'u', 'w', 'y']
-
-console.log(insertionSort(objects, (a, b) => a.id - b.id));
-// [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }]
-```
-
-##### desc
-
-```js
-console.log(insertionSort(numbers, (a, b) => b - a));
-// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
-
-console.log(insertionSort(strings, (a, b) => a < b ? 1 : -1));
-// ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
-
-console.log(insertionSort(objects, (a, b) => b.id - a.id));
-// [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
-```
-
-#### radixSort(list[, order, getNumber])
-
-##### asc
-
-```js
-console.log(radixSort(numbers));
-// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
-
-console.log(radixSort(objects, 'asc', (a) => a.id));
-// [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }]
-```
-
-##### desc
-
-```js
-console.log(radixSort(numbers, 'desc'));
-// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
-
-console.log(radixSort(objects, 'desc', (a) => a.id));
-// [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
-```
-
-#### heapSort(list[, compare])
-
-##### asc
-
-```js
-console.log(heapSort(numbers));
-// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
-
-console.log(heapSort(strings));
-// ['a', 'd', 'e', 'i', 'm', 'o', 'r', 'u', 'w', 'y']
-
-console.log(heapSort(objects, (a, b) => a.id - b.id));
-// [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }]
-```
-
-##### desc
-
-```js
-console.log(heapSort(numbers, (a, b) => b - a));
-// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
-
-console.log(heapSort(strings, (a, b) => a < b ? 1 : -1));
-// ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
-
-console.log(heapSort(objects, (a, b) => b.id - a.id));
-// [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
-```
-
-#### quickSort(list[, compare])
-
-##### asc
-
-```js
-console.log(quickSort(numbers));
-// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
-
-console.log(quickSort(strings));
-// ['a', 'd', 'e', 'i', 'm', 'o', 'r', 'u', 'w', 'y']
-
-console.log(quickSort(objects, (a, b) => a.id - b.id));
-// [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }]
-```
-##### desc
-
-```js
-console.log(quickSort(numbers, (a, b) => b - a));
-// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
-
-console.log(quickSort(strings, (a, b) => a < b ? 1 : -1));
-// ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
-
-console.log(quickSort(objects, (a, b) => b.id - a.id));
-// [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
-```
-
-
-#### mergeSort(list[, compare])
-
-##### asc
-
-```js
-console.log(mergeSort(numbers));
-// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
-
-console.log(mergeSort(strings));
-// ['a', 'd', 'e', 'i', 'm', 'o', 'r', 'u', 'w', 'y']
-
-console.log(mergeSort(objects, (a, b) => a.id - b.id));
-// [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }]
-```
-
-##### desc
-
-```js
-console.log(mergeSort(numbers, (a, b) => b - a));
-// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
-
-console.log(mergeSort(strings, (a, b) => a < b ? 1 : -1));
-// ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
-
-console.log(mergeSort(objects, (a, b) => b.id - a.id));
-// [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
 ```
 
 ### Benchmark
