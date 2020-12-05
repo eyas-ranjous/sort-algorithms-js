@@ -77,6 +77,58 @@ const objects = [
 ];
 ```
 
+Examples
+
+#### mergeSort
+
+* asc
+
+```js
+console.log(mergeSort(numbers));
+// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
+
+console.log(mergeSort(strings));
+// ['a', 'd', 'e', 'i', 'm', 'o', 'r', 'u', 'w', 'y']
+
+console.log(mergeSort(objects, (a, b) => a.id - b.id));
+// [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }]
+```
+
+* desc
+
+```js
+console.log(mergeSort(numbers, (a, b) => b - a));
+// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
+
+console.log(mergeSort(strings, (a, b) => a < b ? 1 : -1));
+// ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
+
+console.log(mergeSort(objects, (a, b) => b.id - a.id));
+// [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
+```
+
+#### radixSort
+
+* asc
+
+```js
+console.log(radixSort(numbers));
+// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
+
+console.log(radixSort(objects, 'asc', (a) => a.id));
+// [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }]
+```
+
+* desc
+
+```js
+console.log(radixSort(numbers, 'desc'));
+// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
+
+console.log(radixSort(objects, 'desc', (a) => a.id));
+// [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
+```
+
 ### Benchmark
 I built a small cmd tool to generate a benchmark for each algorithm on a randomly generated list of numbers.
 
