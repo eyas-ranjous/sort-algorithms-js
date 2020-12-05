@@ -66,6 +66,8 @@ import {
 ### Usage
 default order is ascending. all algorithms accept a comparison callback as the second param except radix sort which accepts the order as a string "asc" or "decs" and a second param callback to obtain a number value from an object.
 
+#### Examples
+
 ```js
 const numbers = [4, 1, 8, 6, -3, -1, 0, 7, -6, 9];
 
@@ -76,8 +78,6 @@ const objects = [
   { id: 2 }, { id: 0 },{ id: 7 }, { id: 5 }, { id: 9 }
 ];
 ```
-
-#### Examples
 
 ##### mergeSort
 
