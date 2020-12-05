@@ -12,7 +12,7 @@ Sort Algorithms implementation in javascript with ability to use a comparison ca
   * [Implemented Algorithms](#implemented-algorithms)
   * [require](#require)
   * [import](#import)
-  * [Examples](#examples)
+  * [Usage](#usage)
     * [bubbleSort(list[, compare])](#bubbleSortlist-compare)
     * [selectionSort(list[, compare])](#selectionSortlist-compare)
     * [insertionSort(list[, compare])](#insertionSortlist-compare)
@@ -72,7 +72,7 @@ import {
 } from 'sort-algorithms-js';
 ```
 
-### Examples
+### Usage
 default order is ascending. all algorithms accept a comparison callback as the second param except radix sort which accepts the order as a string "asc" or "decs" and a second param callback to obtain a number value from an object.
 
 ```js
