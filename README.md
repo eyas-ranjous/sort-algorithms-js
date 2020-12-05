@@ -19,14 +19,13 @@ Sort Algorithms implementation in javascript with ability to use a comparison ca
 </table>
 
 ## Table of Contents
-* [Install](#install)
-* [API](#api)
+  * [Install](#install)
   * [require](#require)
   * [import](#import)
   * [Usage](#usage)
   * [benchmark](#benchmark) ⭐
- * [Build](#build)
- * [License](#license)
+  * [Build](#build)
+  * [License](#license)
 
 ### Install
 
