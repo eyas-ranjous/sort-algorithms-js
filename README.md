@@ -13,29 +13,27 @@ Sort Algorithms implementation in javascript with ability to use a comparison ca
   * [require](#require)
   * [import](#import)
   * [Examples](#examples)
-    * [bubbleSort(list, compare)](#bubbleSortlist-compare)
-    * [selectionSort(list, compare)](#selectionSortlist-compare)
-    * [insertionSort(list, compare)](#insertionSortlist-compare)
-    * [radixSort(list, order, getNumber)](#radixSortlist-order-getnumber)
-    * [heapSort(list, compare)](#heapSortlist-compare)
-    * [quickSort(list, compare)](#quickSortlist-compare)
-    * [mergeSort(list, compare)](#mergeSortlist-compare)
+    * [bubbleSort(list[, compare])](#bubbleSortlist-compare)
+    * [selectionSort(list[, compare])](#selectionSortlist-compare)
+    * [insertionSort(list[, compare])](#insertionSortlist-compare)
+    * [radixSort(list[, order, getNumber])](#radixSortlist-order-getnumber)
+    * [heapSort(list[, compare])](#heapSortlist-compare)
+    * [quickSort(list[, compare])](#quickSortlist-compare)
+    * [mergeSort(list[, compare])](#mergeSortlist-compare)
   * [benchmark](#benchmark) ⭐
  * [Build](#build)
- * [Contribution](#contribution) 🤝
  * [License](#license)
 
 ## Implemented Algorithms
 
 <table>
-  <tr><th>algorithm</th><th>source</th></tr>
-  <tr><td>Bubble Sort</td><td>https://en.wikipedia.org/wiki/Bubble_sort</td></tr>
-  <tr><td>Selection Sort</td><td>https://en.wikipedia.org/wiki/Selection_sort</td></tr>
-  <tr><td>Insertion Sort</td><td>https://en.wikipedia.org/wiki/Insertion_sort</td></tr>
-  <tr><td>Radix Sort (numbers only)</td><td>https://en.wikipedia.org/wiki/Radix_sort</td></tr>
-  <tr><td>Heap Sort</td><td>https://en.wikipedia.org/wiki/Heapsort</td></tr>
-  <tr><td>Quick Sort</td><td>https://en.wikipedia.org/wiki/Quicksort</td></tr>
-  <tr><td>Merge Sort</td><td>https://en.wikipedia.org/wiki/Merge_sort</td></tr>
+  <tr><td><a href="https://en.wikipedia.org/wiki/Bubble_sort" target="_blank">Bubble Sort</a></td></tr>
+  <tr><td><a href="https://en.wikipedia.org/wiki/Selection_sort" target="_blank">Selection Sort</a></td></tr>
+  <tr><td><a href="https://en.wikipedia.org/wiki/Insertion_sort" target="_blank">Insertion Sort</a></td></tr>
+  <tr><td><a href="https://en.wikipedia.org/wiki/Radix_sort" target="_blank">Radix Sort (numbers only)</a></td></tr>
+  <tr><td><a href="https://en.wikipedia.org/wiki/Heapsort" target="_blank">Heap Sort</a></td></tr>
+  <tr><td><a href="https://en.wikipedia.org/wiki/Quicksort" target="_blank">Quick Sort</a></td></tr>
+  <tr><td><a href="https://en.wikipedia.org/wiki/Merge_sort" target="_blank">Merge Sort</a></td></tr>
 </table>
 
 ## Install
@@ -88,7 +86,7 @@ const objects = [
 ];
 ```
 
-#### bubbleSort(list, compare)
+#### bubbleSort(list[, compare])
 
 ##### asc
 
@@ -116,7 +114,7 @@ console.log(bubbleSort(objects, (a, b) => b.id - a.id));
 // [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
 ```
 
-#### selectionSort(list, compare)
+#### selectionSort(list[, compare])
 
 ##### asc
 
@@ -144,7 +142,7 @@ console.log(selectionSort(objects, (a, b) => b.id - a.id));
 // [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
 ```
 
-#### insertionSort(list, compare)
+#### insertionSort(list[, compare])
 
 ##### asc
 
@@ -172,7 +170,7 @@ console.log(insertionSort(objects, (a, b) => b.id - a.id));
 // [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
 ```
 
-#### radixSort(list, order, getNumber)
+#### radixSort(list[, order, getNumber])
 
 ##### asc
 
@@ -194,7 +192,7 @@ console.log(radixSort(objects, 'desc', (a) => a.id));
 // [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
 ```
 
-#### heapSort(list, compare)
+#### heapSort(list[, compare])
 
 ##### asc
 
@@ -222,7 +220,7 @@ console.log(heapSort(objects, (a, b) => b.id - a.id));
 // [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
 ```
 
-#### quickSort(list, compare)
+#### quickSort(list[, compare])
 
 ##### asc
 
@@ -250,7 +248,7 @@ console.log(quickSort(objects, (a, b) => b.id - a.id));
 ```
 
 
-#### mergeSort(list, compare)
+#### mergeSort(list[, compare])
 
 ##### asc
 
@@ -380,9 +378,6 @@ and I took the best and worst recorded time of each 10 iterations. the result wa
 ```
 grunt build
 ```
-
-## Contribution
-If you'd like to contribute to the project to improve the existing algorithms or implement new ones, feel free to fork the repo in your github and push your code. It just needs to be consistent with the existing code structure and style, as well as tests and README. Once done, please open a PR from development branch. Thanks 🌠
 
 ## License
 The MIT License. Full License is [here](https://github.com/eyas-ranjous/sort-algorithms-js/blob/master/LICENSE)
