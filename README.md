@@ -13,13 +13,6 @@ Sort Algorithms implementation in javascript with ability to use a comparison ca
   * [require](#require)
   * [import](#import)
   * [Usage](#usage)
-    * [bubbleSort(list[, compare])](#bubbleSortlist-compare)
-    * [selectionSort(list[, compare])](#selectionSortlist-compare)
-    * [insertionSort(list[, compare])](#insertionSortlist-compare)
-    * [radixSort(list[, order, getNumber])](#radixSortlist-order-getnumber)
-    * [heapSort(list[, compare])](#heapSortlist-compare)
-    * [quickSort(list[, compare])](#quickSortlist-compare)
-    * [mergeSort(list[, compare])](#mergeSortlist-compare)
   * [benchmark](#benchmark) ⭐
  * [Build](#build)
  * [License](#license)
@@ -27,13 +20,13 @@ Sort Algorithms implementation in javascript with ability to use a comparison ca
 ## Implemented Algorithms
 
 <table>
-  <tr><td><a href="https://en.wikipedia.org/wiki/Bubble_sort" target="_blank">Bubble Sort</a></td></tr>
-  <tr><td><a href="https://en.wikipedia.org/wiki/Selection_sort" target="_blank">Selection Sort</a></td></tr>
-  <tr><td><a href="https://en.wikipedia.org/wiki/Insertion_sort" target="_blank">Insertion Sort</a></td></tr>
-  <tr><td><a href="https://en.wikipedia.org/wiki/Radix_sort" target="_blank">Radix Sort (numbers only)</a></td></tr>
-  <tr><td><a href="https://en.wikipedia.org/wiki/Heapsort" target="_blank">Heap Sort</a></td></tr>
-  <tr><td><a href="https://en.wikipedia.org/wiki/Quicksort" target="_blank">Quick Sort</a></td></tr>
-  <tr><td><a href="https://en.wikipedia.org/wiki/Merge_sort" target="_blank">Merge Sort</a></td></tr>
+  <tr><td>Bubble Sort</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/development/src/bubbleSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Bubble_sort">Wikipedia</a></td></tr>
+  <tr><td>Selection Sort</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/development/src/selectionSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Selection_sort">Wikipedia</a></td></tr>
+  <tr><td>Insertion Sort</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/development/src/insertionSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Insertion_sort">Wikipedia</a></td></tr>
+  <tr><td>Radix Sort (numbers only)</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/development/src/radixSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Radix_sort">Wikipedia</a></td></tr>
+  <tr><td>Heap Sort</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/development/src/heapSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Heapsort">Wikipedia</a></td></tr>
+  <tr><td>Quick Sort</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/development/src/quickSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Quicksort">Wikipedia</a></td></tr>
+  <tr><td>Merge Sort</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/development/src/mergeSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Merge_sort">Wikipedia</a></td></tr>
 </table>
 
 ## Install
