@@ -4,31 +4,19 @@
  * @license MIT
  */
 
-const CompareSortAlgorithm = require('./compareSortAlgorithm');
+exports.selectionSort = ({ list }, { shouldSwap, swap }) => {
+  for (let i = 0; i < list.length - 1; i += 1) {
+    let selectedIndex = i;
 
-/**
- * @class SelectionSort
- * @extends CompareSortAlgorithm
- */
-class SelectionSort extends CompareSortAlgorithm {
-  /**
-   * @public
-   * @return {array}
-   */
-  sort() {
-    for (let i = 0; i < this._list.length - 1; i += 1) {
-      let selectedIndex = i;
-      for (let j = i + 1; j < this._list.length; j += 1) {
-        if (this._shouldSwap(selectedIndex, j)) {
-          selectedIndex = j;
-        }
-      }
-      if (selectedIndex !== i) {
-        this._swap(selectedIndex, i);
+    for (let j = i + 1; j < list.length; j += 1) {
+      if (shouldSwap(selectedIndex, j)) {
+        selectedIndex = j;
       }
     }
-    return this._list;
-  }
-}
 
-module.exports = SelectionSort;
+    if (selectedIndex !== i) {
+      swap(selectedIndex, i);
+    }
+  }
+  return list;
+};

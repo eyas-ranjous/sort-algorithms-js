@@ -4,31 +4,21 @@
  * @license MIT
  */
 
-const CompareSortAlgorithm = require('./compareSortAlgorithm');
+exports.bubbleSort = ({ list }, { shouldSwap, swap }) => {
+  let upperIndex = list.length - 1;
 
-/**
- * @class BubbleSort
- * @extends CompareSortAlgorithm
- */
-class BubbleSort extends CompareSortAlgorithm {
-  /**
-   * @public
-   * @return {array}
-   */
-  sort() {
-    let upperIndex = this._list.length - 1;
-    while (upperIndex > 0) {
-      let swapIndex = 0;
-      for (let i = 0; i < upperIndex; i += 1) {
-        if (this._shouldSwap(i, i + 1)) {
-          this._swap(i, i + 1);
-          swapIndex = i;
-        }
+  while (upperIndex > 0) {
+    let swapIndex = 0;
+
+    for (let i = 0; i < upperIndex; i += 1) {
+      if (shouldSwap(i, i + 1)) {
+        swap(i, i + 1);
+        swapIndex = i;
       }
-      upperIndex = swapIndex;
     }
-    return this._list;
-  }
-}
 
-module.exports = BubbleSort;
+    upperIndex = swapIndex;
+  }
+
+  return list;
+};
