@@ -1,6 +1,6 @@
 const { expect } = require('chai');
 const reload = require('require-reload')(require);
-const { selectionSort } = require('../src/factory');
+const { selectionSort } = require('../lib/factory');
 
 const data = reload('./fixtures/data.json');
 

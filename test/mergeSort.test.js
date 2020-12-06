@@ -1,6 +1,6 @@
 const { expect } = require('chai');
 const reload = require('require-reload')(require);
-const { mergeSort } = require('../src/factory');
+const { mergeSort } = require('../lib/factory');
 
 const data = reload('./fixtures/data.json');
 
