@@ -1,52 +1,41 @@
 <img width="400" alt="aljs" src="https://user-images.githubusercontent.com/6517308/80581008-1a8ff180-89d2-11ea-9126-25e91a00da6d.png">
 
-[![build:?](https://travis-ci.org/eyas-ranjous/sort-algorithms-js.svg?branch=master)](https://travis-ci.org/eyas-ranjous/sort-algorithms-js) [![npm](https://img.shields.io/npm/dm/sort-algorithms-js.svg)](https://www.npmjs.com/package/sort-algorithms-js) [![npm](https://img.shields.io/npm/v/sort-algorithms-js.svg)](https://www.npmjs.com/package/sort-algorithms-js) [![npm](https://img.shields.io/badge/node-%3E=%206.0-blue.svg)](https://www.npmjs.com/package/sort-algorithms-js)
+[![build:?](https://travis-ci.org/eyas-ranjous/sort-algorithms-js.svg?branch=master)](https://travis-ci.org/eyas-ranjous/sort-algorithms-js) [![npm](https://img.shields.io/npm/v/sort-algorithms-js.svg)](https://www.npmjs.com/package/sort-algorithms-js) [![npm](https://img.shields.io/badge/node-%3E=%206.0-blue.svg)](https://www.npmjs.com/package/sort-algorithms-js) [![npm](https://img.shields.io/npm/dm/sort-algorithms-js.svg)](https://www.npmjs.com/package/sort-algorithms-js)
 
 Sort Algorithms implementation in javascript with ability to use a comparison callback similar to javascript `.sort`.
 
-<img width="782" alt="sa" src="https://user-images.githubusercontent.com/6517308/80630484-e93b1400-8a19-11ea-836f-58594fc7b1d1.png">
-
-# Table of Contents
-* [Install](#install)
-* [API](#api)
-  * [Implemented Algorithms](#implemented-algorithms)
-  * [require](#require)
-  * [import](#import)
-  * [Examples](#examples)
-    * [bubbleSort(list, compare)](#bubbleSortlist-compare)
-    * [selectionSort(list, compare)](#selectionSortlist-compare)
-    * [insertionSort(list, compare)](#insertionSortlist-compare)
-    * [radixSort(list, order, getNumber)](#radixSortlist-order-getnumber)
-    * [heapSort(list, compare)](#heapSortlist-compare)
-    * [quickSort(list, compare)](#quickSortlist-compare)
-    * [mergeSort(list, compare)](#mergeSortlist-compare)
-  * [benchmark](#benchmark) ⭐
- * [Build](#build)
- * [Contribution](#contribution) 🤝
- * [License](#license)
+<img width="900" alt="sort" src="https://user-images.githubusercontent.com/6517308/101267767-1ffca980-3722-11eb-9041-f4b272baadb5.png">
 
 ## Implemented Algorithms
 
 <table>
-  <tr><th>algorithm</th><th>source</th></tr>
-  <tr><td>Bubble Sort</td><td>https://en.wikipedia.org/wiki/Bubble_sort</td></tr>
-  <tr><td>Selection Sort</td><td>https://en.wikipedia.org/wiki/Selection_sort</td></tr>
-  <tr><td>Insertion Sort</td><td>https://en.wikipedia.org/wiki/Insertion_sort</td></tr>
-  <tr><td>Radix Sort (numbers only)</td><td>https://en.wikipedia.org/wiki/Radix_sort</td></tr>
-  <tr><td>Heap Sort</td><td>https://en.wikipedia.org/wiki/Heapsort</td></tr>
-  <tr><td>Quick Sort</td><td>https://en.wikipedia.org/wiki/Quicksort</td></tr>
-  <tr><td>Merge Sort</td><td>https://en.wikipedia.org/wiki/Merge_sort</td></tr>
+  <tr><td>Bubble Sort</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/development/src/bubbleSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Bubble_sort">Wikipedia</a></td></tr>
+  <tr><td>Selection Sort</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/development/src/selectionSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Selection_sort">Wikipedia</a></td></tr>
+  <tr><td>Insertion Sort</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/development/src/insertionSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Insertion_sort">Wikipedia</a></td></tr>
+  <tr><td>Radix Sort</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/development/src/radixSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Radix_sort">Wikipedia</a></td></tr>
+  <tr><td>Heap Sort</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/development/src/heapSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Heapsort">Wikipedia</a></td></tr>
+  <tr><td>Quick Sort</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/development/src/quickSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Quicksort">Wikipedia</a></td></tr>
+  <tr><td>Merge Sort</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/development/src/mergeSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Merge_sort">Wikipedia</a></td></tr>
 </table>
 
-## Install
+## Table of Contents
+  * [Install](#install)
+  * [require](#require)
+  * [import](#import)
+  * [Usage](#usage)
+  * [benchmark](#benchmark) ⭐
+  * [Build](#build)
+  * [License](#license)
+
+### Install
 
 ```sh
 npm install --save sort-algorithms-js
 ```
 
-## API
+### API
 
-### require
+#### require
 
 ```js
 const {
@@ -60,7 +49,7 @@ const {
 } = require('sort-algorithms-js');
 ```
 
-### import
+#### import
 
 ```js
 import {
@@ -74,8 +63,10 @@ import {
 } from 'sort-algorithms-js';
 ```
 
-### Examples
+### Usage
 default order is ascending. all algorithms accept a comparison callback as the second param except radix sort which accepts the order as a string "asc" or "decs" and a second param callback to obtain a number value from an object.
+
+#### Examples
 
 ```js
 const numbers = [4, 1, 8, 6, -3, -1, 0, 7, -6, 9];
@@ -88,171 +79,9 @@ const objects = [
 ];
 ```
 
-#### bubbleSort(list, compare)
+##### mergeSort
 
-##### asc
-
-```js
-console.log(bubbleSort(numbers));
-// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
-
-console.log(bubbleSort(strings));
-// ['a', 'd', 'e', 'i', 'm', 'o', 'r', 'u', 'w', 'y']
-
-console.log(bubbleSort(objects, (a, b) => a.id - b.id));
-// [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }]
-```
-
-##### desc
-
-```js
-console.log(bubbleSort(numbers, (a, b) => b - a));
-// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
-
-console.log(bubbleSort(strings, (a, b) => a < b ? 1 : -1));
-// ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
-
-console.log(bubbleSort(objects, (a, b) => b.id - a.id));
-// [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
-```
-
-#### selectionSort(list, compare)
-
-##### asc
-
-```js
-console.log(selectionSort(numbers));
-// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
-
-console.log(selectionSort(strings));
-// ['a', 'd', 'e', 'i', 'm', 'o', 'r', 'u', 'w', 'y']
-
-console.log(selectionSort(objects, (a, b) => a.id - b.id));
-// [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }]
-```
-
-##### desc
-
-```js
-console.log(selectionSort(numbers, (a, b) => b - a));
-// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
-
-console.log(selectionSort(strings, (a, b) => a < b ? 1 : -1));
-// ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
-
-console.log(selectionSort(objects, (a, b) => b.id - a.id));
-// [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
-```
-
-#### insertionSort(list, compare)
-
-##### asc
-
-```js
-console.log(insertionSort(numbers));
-// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
-
-console.log(insertionSort(strings));
-// ['a', 'd', 'e', 'i', 'm', 'o', 'r', 'u', 'w', 'y']
-
-console.log(insertionSort(objects, (a, b) => a.id - b.id));
-// [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }]
-```
-
-##### desc
-
-```js
-console.log(insertionSort(numbers, (a, b) => b - a));
-// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
-
-console.log(insertionSort(strings, (a, b) => a < b ? 1 : -1));
-// ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
-
-console.log(insertionSort(objects, (a, b) => b.id - a.id));
-// [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
-```
-
-#### radixSort(list, order, getNumber)
-
-##### asc
-
-```js
-console.log(radixSort(numbers));
-// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
-
-console.log(radixSort(objects, 'asc', (a) => a.id));
-// [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }]
-```
-
-##### desc
-
-```js
-console.log(radixSort(numbers, 'desc'));
-// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
-
-console.log(radixSort(objects, 'desc', (a) => a.id));
-// [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
-```
-
-#### heapSort(list, compare)
-
-##### asc
-
-```js
-console.log(heapSort(numbers));
-// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
-
-console.log(heapSort(strings));
-// ['a', 'd', 'e', 'i', 'm', 'o', 'r', 'u', 'w', 'y']
-
-console.log(heapSort(objects, (a, b) => a.id - b.id));
-// [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }]
-```
-
-##### desc
-
-```js
-console.log(heapSort(numbers, (a, b) => b - a));
-// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
-
-console.log(heapSort(strings, (a, b) => a < b ? 1 : -1));
-// ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
-
-console.log(heapSort(objects, (a, b) => b.id - a.id));
-// [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
-```
-
-#### quickSort(list, compare)
-
-##### asc
-
-```js
-console.log(quickSort(numbers));
-// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
-
-console.log(quickSort(strings));
-// ['a', 'd', 'e', 'i', 'm', 'o', 'r', 'u', 'w', 'y']
-
-console.log(quickSort(objects, (a, b) => a.id - b.id));
-// [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }]
-```
-##### desc
-
-```js
-console.log(quickSort(numbers, (a, b) => b - a));
-// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
-
-console.log(quickSort(strings, (a, b) => a < b ? 1 : -1));
-// ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
-
-console.log(quickSort(objects, (a, b) => b.id - a.id));
-// [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
-```
-
-
-#### mergeSort(list, compare)
-
-##### asc
+* asc
 
 ```js
 console.log(mergeSort(numbers));
@@ -265,7 +94,7 @@ console.log(mergeSort(objects, (a, b) => a.id - b.id));
 // [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }]
 ```
 
-##### desc
+* desc
 
 ```js
 console.log(mergeSort(numbers, (a, b) => b - a));
@@ -275,6 +104,28 @@ console.log(mergeSort(strings, (a, b) => a < b ? 1 : -1));
 // ['y', 'w', 'u', 'r', 'o', 'm', 'i', 'e', 'd', 'a']
 
 console.log(mergeSort(objects, (a, b) => b.id - a.id));
+// [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
+```
+
+##### radixSort
+
+* asc
+
+```js
+console.log(radixSort(numbers));
+// [-6, -3, -1, 0, 1, 4, 6, 7, 8, 9]
+
+console.log(radixSort(objects, 'asc', (a) => a.id));
+// [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }]
+```
+
+* desc
+
+```js
+console.log(radixSort(numbers, 'desc'));
+// [9, 8, 7, 6, 4, 1, 0, -1, -3, -6]
+
+console.log(radixSort(objects, 'desc', (a) => a.id));
 // [{ id: 9 }, { id: 8 }, { id: 7 }, { id: 6 }, { id: 5 }, { id: 4 }, { id: 3 }, { id: 2 }, { id: 1 }, { id: 0 }]
 ```
 
@@ -380,9 +231,6 @@ and I took the best and worst recorded time of each 10 iterations. the result wa
 ```
 grunt build
 ```
-
-## Contribution
-If you'd like to contribute to the project to improve the existing algorithms or implement new ones, feel free to fork the repo in your github and push your code. It just needs to be consistent with the existing code structure and style, as well as tests and README. Once done, please open a PR from development branch. Thanks 🌠
 
 ## License
 The MIT License. Full License is [here](https://github.com/eyas-ranjous/sort-algorithms-js/blob/master/LICENSE)
