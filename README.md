@@ -64,7 +64,7 @@ import {
 ```
 
 ### Usage
-default order is ascending. all algorithms accept a comparison callback as the second param except radix sort which accepts the order as a string "asc" or "decs" and a second param callback to obtain a number value from an object.
+default order is ascending. all algorithms accept a comparison callback as the second param except radix sort which accepts the order as a string "asc" or "desc" and a second param callback to obtain a number value from an object.
 
 #### Examples
 
