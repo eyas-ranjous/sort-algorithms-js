@@ -49,7 +49,6 @@ import {
 <table>
   <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
   <tr><td>10k</td><td></td><td></td></tr>
-  <tr><td>10k</td><td></td><td></td></tr>
   <tr><td>50k</td><td></td><td></td></tr>
   <tr><td>100k</td><td></td><td></td></tr>
   <tr><td>1M</td><td></td><td></td></tr>
@@ -59,7 +58,6 @@ import {
 ##### Benchmark
 <table>
   <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
-  <tr><td>10k</td><td></td><td></td></tr>
   <tr><td>10k</td><td></td><td></td></tr>
   <tr><td>50k</td><td></td><td></td></tr>
   <tr><td>100k</td><td></td><td></td></tr>
@@ -71,7 +69,6 @@ import {
 <table>
   <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
   <tr><td>10k</td><td></td><td></td></tr>
-  <tr><td>10k</td><td></td><td></td></tr>
   <tr><td>50k</td><td></td><td></td></tr>
   <tr><td>100k</td><td></td><td></td></tr>
   <tr><td>1M</td><td></td><td></td></tr>
@@ -81,7 +78,6 @@ import {
 ##### Benchmark
 <table>
   <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
-  <tr><td>10k</td><td></td><td></td></tr>
   <tr><td>10k</td><td></td><td></td></tr>
   <tr><td>50k</td><td></td><td></td></tr>
   <tr><td>100k</td><td></td><td></td></tr>
@@ -94,7 +90,6 @@ import {
 ##### Benchmark
 <table>
   <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
-  <tr><td>10k</td><td></td><td></td></tr>
   <tr><td>10k</td><td></td><td></td></tr>
   <tr><td>50k</td><td></td><td></td></tr>
   <tr><td>100k</td><td></td><td></td></tr>
@@ -109,7 +104,6 @@ import {
 <table>
   <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
   <tr><td>10k</td><td></td><td></td></tr>
-  <tr><td>10k</td><td></td><td></td></tr>
   <tr><td>50k</td><td></td><td></td></tr>
   <tr><td>100k</td><td></td><td></td></tr>
   <tr><td>1M</td><td></td><td></td></tr>
@@ -122,7 +116,6 @@ import {
 ##### Benchmark
 <table>
   <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
-  <tr><td>10k</td><td></td><td></td></tr>
   <tr><td>10k</td><td></td><td></td></tr>
   <tr><td>50k</td><td></td><td></td></tr>
   <tr><td>100k</td><td></td><td></td></tr>
