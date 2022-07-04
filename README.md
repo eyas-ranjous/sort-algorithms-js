@@ -2,26 +2,15 @@
 
 [![npm](https://img.shields.io/npm/v/sort-algorithms-js.svg)](https://www.npmjs.com/package/sort-algorithms-js) [![npm](https://img.shields.io/badge/node-%3E=%206.0-blue.svg)](https://www.npmjs.com/package/sort-algorithms-js) [![npm](https://img.shields.io/npm/dm/sort-algorithms-js.svg)](https://www.npmjs.com/package/sort-algorithms-js)
 
-Sort Algorithms implementation in javascript with ability to use a comparison callback similar to javascript `.sort`.
+soft algorithms implementation in javascript with ability to use a compare callback similar to javascript `.sort`.
 
 ## API
 
-<table>
-  <tr><td>Bubble Sort</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/master/lib/bubbleSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Bubble_sort">Wikipedia</a></td></tr>
-  <tr><td>Selection Sort</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/master/lib/selectionSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Selection_sort">Wikipedia</a></td></tr>
-  <tr><td>Insertion Sort</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/master/lib/insertionSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Insertion_sort">Wikipedia</a></td></tr>
-  <tr><td>Radix Sort</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/master/lib/radixSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Radix_sort">Wikipedia</a></td></tr>
-  <tr><td>Heap Sort</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/master/lib/heapSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Heapsort">Wikipedia</a></td></tr>
-  <tr><td>Quick Sort</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/master/lib/quickSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Quicksort">Wikipedia</a></td></tr>
-  <tr><td>Merge Sort</td><td><a href="https://github.com/eyas-ranjous/sort-algorithms-js/blob/master/lib/mergeSort.js">Source Code</a></td><td><a href="https://en.wikipedia.org/wiki/Merge_sort">Wikipedia</a></td></tr>
-</table>
-
-## Table of Contents
+## Contents
   * [Install](#install)
   * [require](#require)
   * [import](#import)
-  * [Usage](#usage)
-  * [benchmark](#benchmark) ⭐
+  * [API](#api)
   * [Build](#build)
   * [License](#license)
 
@@ -31,38 +20,25 @@ Sort Algorithms implementation in javascript with ability to use a comparison ca
 npm install --save sort-algorithms-js
 ```
 
-### API
-
 #### require
-
 ```js
 const {
-  bubbleSort,
-  selectionSort,
-  insertionSort,
-  radixSort,
-  heapSort,
-  quickSort,
-  mergeSort
+  bubbleSort, selectionSort, insertionSort, radixSort,
+  heapSort, quickSort, mergeSort
 } = require('sort-algorithms-js');
 ```
 
 #### import
-
 ```js
 import {
-  bubbleSort,
-  selectionSort,
-  insertionSort,
-  radixSort,
-  heapSort,
-  quickSort,
-  mergeSort
+  bubbleSort, selectionSort, insertionSort, radixSort,
+  heapSort, quickSort, mergeSort
 } from 'sort-algorithms-js';
 ```
 
+### API
+
 ### Usage
-default order is ascending. all algorithms accept a comparison callback as the second param except radix sort which accepts the order as a string "asc" or "desc" and a second param callback to obtain a number value from an object.
 
 #### Examples
 
