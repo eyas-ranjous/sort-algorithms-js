@@ -4,8 +4,6 @@
 
 soft algorithms implementation in javascript with ability to use a compare callback similar to javascript `.sort`.
 
-## API
-
 ## Contents
   * [Install](#install)
   * [require](#require)
@@ -47,17 +45,67 @@ import {
 
 #### bubbleSort
 
+##### Benchmark
+<table>
+  <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
+  <tr><td>10k</td><td>7 seconds 304 ms</td><td>20 seconds 666 ms</td></tr>
+  <tr><td>50k</td><td>7 seconds 304 ms</td><td>20 seconds 666 ms</td></tr>
+  <tr><td>100k</td><td>33 seconds 793 ms</td><td>80 seconds 753 ms</td></tr>
+</table>
+
 #### selectionSort
+##### Benchmark
+<table>
+  <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
+  <tr><td>10k</td><td>7 seconds 304 ms</td><td>20 seconds 666 ms</td></tr>
+  <tr><td>50k</td><td>7 seconds 304 ms</td><td>20 seconds 666 ms</td></tr>
+  <tr><td>100k</td><td>33 seconds 793 ms</td><td>80 seconds 753 ms</td></tr>
+</table>
 
 #### insertionSort
+##### Benchmark
+<table>
+  <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
+  <tr><td>10k</td><td>7 seconds 304 ms</td><td>20 seconds 666 ms</td></tr>
+  <tr><td>50k</td><td>7 seconds 304 ms</td><td>20 seconds 666 ms</td></tr>
+  <tr><td>100k</td><td>33 seconds 793 ms</td><td>80 seconds 753 ms</td></tr>
+</table>
 
 #### radixSort
+##### Benchmark
+<table>
+  <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
+  <tr><td>10k</td><td>7 seconds 304 ms</td><td>20 seconds 666 ms</td></tr>
+  <tr><td>50k</td><td>7 seconds 304 ms</td><td>20 seconds 666 ms</td></tr>
+  <tr><td>100k</td><td>33 seconds 793 ms</td><td>80 seconds 753 ms</td></tr>
+</table>
 
 #### mergeSort
+##### Benchmark
+<table>
+  <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
+  <tr><td>10k</td><td>7 seconds 304 ms</td><td>20 seconds 666 ms</td></tr>
+  <tr><td>50k</td><td>7 seconds 304 ms</td><td>20 seconds 666 ms</td></tr>
+  <tr><td>100k</td><td>33 seconds 793 ms</td><td>80 seconds 753 ms</td></tr>
+</table>
 
 #### heapSort
+##### Benchmark
+<table>
+  <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
+  <tr><td>10k</td><td>7 seconds 304 ms</td><td>20 seconds 666 ms</td></tr>
+  <tr><td>50k</td><td>7 seconds 304 ms</td><td>20 seconds 666 ms</td></tr>
+  <tr><td>100k</td><td>33 seconds 793 ms</td><td>80 seconds 753 ms</td></tr>
+</table>
 
 #### quickSort
+##### Benchmark
+<table>
+  <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
+  <tr><td>10k</td><td>7 seconds 304 ms</td><td>20 seconds 666 ms</td></tr>
+  <tr><td>50k</td><td>7 seconds 304 ms</td><td>20 seconds 666 ms</td></tr>
+  <tr><td>100k</td><td>33 seconds 793 ms</td><td>80 seconds 753 ms</td></tr>
+</table>
 
 ### Benchmark
 I built a small cmd tool to generate a benchmark for each algorithm on a randomly generated list of numbers.
