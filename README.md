@@ -48,7 +48,7 @@ import {
 ##### Benchmark
 
 <table>
-  <tr><td align="center" cellspan="3">Node v14</td></tr>
+  <tr><td align="center" colspan="3">Node v14</td></tr>
   <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
   <tr><td>1k</td><td>0 seconds 5 ms</td><td>0 seconds 9 ms</td></tr>
   <tr><td>10k</td><td>0 seconds 227 ms</td>0 seconds 249 ms<td></td></tr>
