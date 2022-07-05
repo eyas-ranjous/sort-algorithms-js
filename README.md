@@ -10,7 +10,7 @@ soft algorithms implementation with ability to use a compare callback similar to
   * [import](#import)
   * [API](#api)
     * [bubbleSort](#bubbleSort)
-    * [insertioSort](#insertionSort)
+    * [insertionSort](#insertionSort)
     * [selectionSort](#selectionSort)
     * [radixSort](#radixSort)
     * [heapSort](#heapSort)
