@@ -123,30 +123,40 @@ radixSort([{ id: 341 }, { id: 947 }, { id: 132 }], 'desc', (obj) => obj.id); // 
 </table>
 
 #### mergeSort
+runtime complexity: O(n^2)
+
+```js
+mergeSort([2, 1, 7, 3, 9, -1, -5]); // [ -5, -1, 1, 2, 3, 7, 9 ]
+mergeSort([2, 1, 7, 3, 9, -1, -5], (a, b) => b - a); // [ 9, 7, 3, 2, 1, -1, -5 ]
+```
+
 ##### Benchmark
 <table>
+  <tr><td align="center" colspan="3">Node v14</td></tr>
   <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
-  <tr><td>10k</td><td></td><td></td></tr>
-  <tr><td>50k</td><td></td><td></td></tr>
-  <tr><td>100k</td><td></td><td></td></tr>
-  <tr><td>1M</td><td></td><td></td></tr>
-  <tr><td>10M</td><td></td><td></td></tr>
-  <tr><td>50M</td><td></td><td></td></tr>
-  <tr><td>100M</td><td></td><td></td></tr>
+  <tr><td>10k</td><td>0 seconds 16 ms</td><td>0 seconds 23 ms</td></tr>
+  <tr><td>50k</td><td>0 seconds 38 ms</td><td>0 seconds 45 ms</td></tr>
+  <tr><td>100k</td><td>0 seconds 54 ms</td><td>0 seconds 60 ms</td></tr>
+  <tr><td>1M</td><td>0 seconds 413 ms</td><td>0 seconds 435 ms</td></tr>
+  <tr><td>10M</td><td>5 seconds 78 ms</td><td>6 seconds 712 ms</td></tr>
+  <tr><td>50M</td><td>33 seconds 229 ms</td><td>35 seconds 659 ms</td></tr>
+  <tr><td>100M</td><td>82 seconds 777 ms</td><td>86 seconds 194 ms</td></tr>
 </table>
 
 #### heapSort
 ##### Benchmark
 <table>
+  <tr><td align="center" colspan="3">Node v14</td></tr>
   <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
-  <tr><td>10k</td><td></td><td></td></tr>
-  <tr><td>50k</td><td></td><td></td></tr>
-  <tr><td>100k</td><td></td><td></td></tr>
-  <tr><td>1M</td><td></td><td></td></tr>
-  <tr><td>10M</td><td></td><td></td></tr>
-  <tr><td>50M</td><td></td><td></td></tr>
-  <tr><td>100M</td><td></td><td></td></tr>
+  <tr><td>10k</td><td>0 seconds 12 ms</td><td>0 seconds 19 ms</td></tr>
+  <tr><td>50k</td><td>0 seconds 33 ms</td><td>0 seconds 45 ms</td></tr>
+  <tr><td>100k</td><td>0 seconds 54 ms</td><td>0 seconds 60 ms</td></tr>
+  <tr><td>1M</td><td>0 seconds 413 ms</td><td>0 seconds 435 ms</td></tr>
+  <tr><td>10M</td><td>5 seconds 78 ms</td><td>6 seconds 712 ms</td></tr>
+  <tr><td>50M</td><td>33 seconds 229 ms</td><td>35 seconds 659 ms</td></tr>
+  <tr><td>100M</td><td>82 seconds 777 ms</td><td>86 seconds 194 ms</td></tr>
 </table>
+
 
 #### quickSort
 ##### Benchmark
