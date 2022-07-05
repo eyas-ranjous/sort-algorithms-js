@@ -13,8 +13,8 @@ soft algorithms implementation with ability to use a compare callback similar to
     * [insertioSort](#insertionSort)
     * [selectionSort](#selectionSort)
     * [radixSort](#radixSort)
-    * [mergeSort](#mergeSort)
     * [heapSort](#heapSort)
+    * [mergeSort](#mergeSort)
     * [quickSort](#quickSort)
   * [Build](#build)
   * [License](#license)
@@ -122,8 +122,29 @@ radixSort([{ id: 341 }, { id: 947 }, { id: 132 }], 'desc', (obj) => obj.id); // 
   <tr><td>50M</td><td align="center" colspan="2">❌</td></tr>
 </table>
 
+#### heapSort
+runtime complexity: O(n*log(n))
+
+```js
+heapSort([2, 1, 7, 3, 9, -1, -5]); // [ -5, -1, 1, 2, 3, 7, 9 ]
+heapSort([2, 1, 7, 3, 9, -1, -5], (a, b) => b - a); // [ 9, 7, 3, 2, 1, -1, -5 ]
+```
+
+##### Benchmark
+<table>
+  <tr><td align="center" colspan="3">Node v14</td></tr>
+  <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
+  <tr><td>10k</td><td>0 seconds 12 ms</td><td>0 seconds 14 ms</td></tr>
+  <tr><td>50k</td><td>0 seconds 21 ms</td><td>0 seconds 25 ms</td></tr>
+  <tr><td>100k</td><td>0 seconds 31 ms</td><td>0 seconds 44 ms</td></tr>
+  <tr><td>1M</td><td>0 seconds 283 ms</td><td>0 seconds 313 ms</td></tr>
+  <tr><td>10M</td><td>5 seconds 219 ms</td><td>6 seconds 367 ms</td></tr>
+  <tr><td>50M</td><td>34 seconds 21 ms</td><td>46 seconds 167 ms</td></tr>
+  <tr><td>100M</td><td>76 seconds 485 ms</td><td>87 seconds 991 ms</td></tr>
+</table>
+
 #### mergeSort
-runtime complexity: O(n^2)
+runtime complexity: O(n*log(n))
 
 ```js
 mergeSort([2, 1, 7, 3, 9, -1, -5]); // [ -5, -1, 1, 2, 3, 7, 9 ]
@@ -143,32 +164,25 @@ mergeSort([2, 1, 7, 3, 9, -1, -5], (a, b) => b - a); // [ 9, 7, 3, 2, 1, -1, -5 
   <tr><td>100M</td><td>82 seconds 777 ms</td><td>86 seconds 194 ms</td></tr>
 </table>
 
-#### heapSort
+#### quickSort
+runtime complexity: O(n*log(n))
+
+```js
+quickSort([2, 1, 7, 3, 9, -1, -5]); // [ -5, -1, 1, 2, 3, 7, 9 ]
+quickSort([2, 1, 7, 3, 9, -1, -5], (a, b) => b - a); // [ 9, 7, 3, 2, 1, -1, -5 ]
+```
+
 ##### Benchmark
 <table>
   <tr><td align="center" colspan="3">Node v14</td></tr>
   <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
-  <tr><td>10k</td><td>0 seconds 12 ms</td><td>0 seconds 19 ms</td></tr>
-  <tr><td>50k</td><td>0 seconds 33 ms</td><td>0 seconds 45 ms</td></tr>
-  <tr><td>100k</td><td>0 seconds 54 ms</td><td>0 seconds 60 ms</td></tr>
-  <tr><td>1M</td><td>0 seconds 413 ms</td><td>0 seconds 435 ms</td></tr>
-  <tr><td>10M</td><td>5 seconds 78 ms</td><td>6 seconds 712 ms</td></tr>
-  <tr><td>50M</td><td>33 seconds 229 ms</td><td>35 seconds 659 ms</td></tr>
-  <tr><td>100M</td><td>82 seconds 777 ms</td><td>86 seconds 194 ms</td></tr>
-</table>
-
-
-#### quickSort
-##### Benchmark
-<table>
-  <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
-  <tr><td>10k</td><td></td><td></td></tr>
-  <tr><td>50k</td><td></td><td></td></tr>
-  <tr><td>100k</td><td></td><td></td></tr>
-  <tr><td>1M</td><td></td><td></td></tr>
-  <tr><td>10M</td><td></td><td></td></tr>
-  <tr><td>50M</td><td></td><td></td></tr>
-  <tr><td>100M</td><td></td><td></td></tr>
+  <tr><td>10k</td><td>0 seconds 6 ms</td><td>0 seconds 13 ms</td></tr>
+  <tr><td>50k</td><td>0 seconds 18 ms</td><td>0 seconds 26 ms</td></tr>
+  <tr><td>100k</td><td>0 seconds 26 ms</td><td>0 seconds 34 ms</td></tr>
+  <tr><td>1M</td><td>0 seconds 167 ms</td><td>0 seconds 187 ms</td></tr>
+  <tr><td>10M</td><td>1 seconds 831 ms</td><td>2 seconds 188 ms</td></tr>
+  <tr><td>50M</td><td>10 seconds 402 ms</td><td>14 seconds 777 ms</td></tr>
+  <tr><td>100M</td><td>24 seconds 253 ms</td><td>34 seconds 705 ms</td></tr>
 </table>
 
 ## Build
