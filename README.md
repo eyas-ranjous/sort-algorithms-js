@@ -71,11 +71,13 @@ selectionSort([2, 1, 7, 3, 9, -1, -5], (a, b) => a - b); // [ -5, -1, 1, 2, 3, 7
 
 ##### Benchmark
 <table>
+  <tr><td align="center" colspan="3">Node v14</td></tr>
   <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
-  <tr><td>10k</td><td></td><td></td></tr>
-  <tr><td>50k</td><td></td><td></td></tr>
-  <tr><td>100k</td><td></td><td></td></tr>
-  <tr><td>1M</td><td></td><td></td></tr>
+  <tr><td>1k</td><td>0 seconds 4 ms</td><td>0 seconds 8 ms</td></tr>
+  <tr><td>10k</td><td>0 seconds 125 ms</td><td>0 seconds 139 ms</td></tr>
+  <tr><td>50k</td><td>2 seconds 178 ms</td><td>2 seconds 302 ms</td></tr>
+  <tr><td>100k</td><td>9 seconds 740 ms</td><td>10 seconds 460 ms</td></tr>
+  <tr><td>1M</td><td align="center" colspan="2">❌</td></tr>
 </table>
 
 #### insertionSort
