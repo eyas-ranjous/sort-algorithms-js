@@ -10,8 +10,8 @@ soft algorithms implementation with ability to use a compare callback similar to
   * [import](#import)
   * [API](#api)
     * [bubbleSort](#bubbleSort)
-    * [selectionSort](#selectionSort)
     * [insertioSort](#insertionSort)
+    * [selectionSort](#selectionSort)
     * [radixSort](#radixSort)
     * [mergeSort](#mergeSort)
     * [heapSort](#heapSort)
@@ -47,11 +47,11 @@ import {
 runtime complexity: O(n^2)
 
 ```js
-bubbleSort([2, 1, 7, 3, 9, -1, -5], (a, b) => a - b); // [ -5, -1, 1, 2, 3, 7, 9 ]
+bubbleSort([2, 1, 7, 3, 9, -1, -5]); // [ -5, -1, 1, 2, 3, 7, 9 ]
+bubbleSort([2, 1, 7, 3, 9, -1, -5], (a, b) => b - a); // [ 9, 7, 3, 2, 1, -1, -5 ]
 ```
 
 ##### Benchmark
-
 <table>
   <tr><td align="center" colspan="3">Node v14</td></tr>
   <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
@@ -62,11 +62,30 @@ bubbleSort([2, 1, 7, 3, 9, -1, -5], (a, b) => a - b); // [ -5, -1, 1, 2, 3, 7, 9
   <tr><td>1M</td><td align="center" colspan="2">❌</td></tr>
 </table>
 
+#### insertionSort
+runtime complexity: O(n^2)
+
+```js
+insertionSort([2, 1, 7, 3, 9, -1, -5]); // [ -5, -1, 1, 2, 3, 7, 9 ]
+insertionSort([2, 1, 7, 3, 9, -1, -5], (a, b) => b - a); // [ 9, 7, 3, 2, 1, -1, -5 ]
+```
+
+##### Benchmark
+<table>
+  <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
+  <tr><td>1k</td><td>0 seconds 5 ms</td><td>0 seconds 10 ms</td></tr>
+  <tr><td>10k</td><td>0 seconds 129 ms</td><td>0 seconds 145 ms</td></tr>
+  <tr><td>50k</td><td>3 seconds 49 ms</td><td>3 seconds 596 ms</td></tr>
+  <tr><td>100k</td><td>13 seconds 575 ms</td><td>16 seconds 876 ms</td></tr>
+  <tr><td>1M</td><td align="center" colspan="2">❌</td></tr>
+</table>
+
 #### selectionSort
 runtime complexity: O(n^2)
 
 ```js
-selectionSort([2, 1, 7, 3, 9, -1, -5], (a, b) => a - b); // [ -5, -1, 1, 2, 3, 7, 9 ]
+selectionSort([2, 1, 7, 3, 9, -1, -5]); // [ -5, -1, 1, 2, 3, 7, 9 ]
+selectionSort([2, 1, 7, 3, 9, -1, -5], (a, b) => b - a); // [ 9, 7, 3, 2, 1, -1, -5 ]
 ```
 
 ##### Benchmark
@@ -78,22 +97,6 @@ selectionSort([2, 1, 7, 3, 9, -1, -5], (a, b) => a - b); // [ -5, -1, 1, 2, 3, 7
   <tr><td>50k</td><td>2 seconds 178 ms</td><td>2 seconds 302 ms</td></tr>
   <tr><td>100k</td><td>9 seconds 740 ms</td><td>10 seconds 460 ms</td></tr>
   <tr><td>1M</td><td align="center" colspan="2">❌</td></tr>
-</table>
-
-#### insertionSort
-O(n^2)
-
-```js
-selectionSort([2, 1, 7, 3, 9, -1, -5], (a, b) => a - b); // [ -5, -1, 1, 2, 3, 7, 9 ]
-```
-
-##### Benchmark
-<table>
-  <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
-  <tr><td>10k</td><td></td><td></td></tr>
-  <tr><td>50k</td><td></td><td></td></tr>
-  <tr><td>100k</td><td></td><td></td></tr>
-  <tr><td>1M</td><td></td><td></td></tr>
 </table>
 
 #### radixSort
