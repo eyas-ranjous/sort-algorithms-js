@@ -102,15 +102,22 @@ selectionSort([2, 1, 7, 3, 9, -1, -5], (a, b) => b - a); // [ 9, 7, 3, 2, 1, -1,
 #### radixSort
 Only sorts numbers in O(n*d) runtime : d is the number of digits in the largest number.
 
+```js
+radixSort([2, 1, 7, 3, 9, -1, -5]); // [ -5, -1, 1, 2, 3, 7, 9 ]
+radixSort([2, 1, 7, 3, 9, -1, -5], 'desc'); // [ 9, 7, 3, 2, 1, -1, -5 ]
+radixSort([{ id: 341 }, { id: 947 }, { id: 132 }], 'asc', (obj) => obj.id); // [ { id: 132 }, { id: 341 }, { id: 947 } ]
+radixSort([{ id: 341 }, { id: 947 }, { id: 132 }], 'desc', (obj) => obj.id); // [ { id: 947 }, { id: 341 }, { id: 132 } ]
+```
+
 ##### Benchmark
 <table>
   <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
-  <tr><td>10k</td><td></td><td></td></tr>
-  <tr><td>50k</td><td></td><td></td></tr>
-  <tr><td>100k</td><td></td><td></td></tr>
-  <tr><td>1M</td><td></td><td></td></tr>
-  <tr><td>10M</td><td></td><td></td></tr>
-  <tr><td>50M</td><td></td><td></td></tr>
+  <tr><td>10k</td><td>0 seconds 21 ms</td><td>0 seconds 30 ms</td></tr>
+  <tr><td>50k</td><td>0 seconds 61 ms</td><td>0 seconds 81 ms</td></tr>
+  <tr><td>100k</td><td>0 seconds 97 ms</td><td>0 seconds 115 ms</td></tr>
+  <tr><td>1M</td><td>1 seconds 27 ms</td><td>1 seconds 103 ms</td></tr>
+  <tr><td>10M</td><td>13 seconds 844 ms</td><td>17 seconds 257 ms</td></tr>
+  <tr><td>50M</td><td align="center" colspan="2">❌</td></tr>
 </table>
 
 #### mergeSort
