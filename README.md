@@ -44,6 +44,11 @@ import {
 ### API
 
 #### bubbleSort
+O(n^2)
+
+```js
+bubbleSort([2, 1, 7, 3, 9, -1, -5], (a, b) => a - b); // [ -5, -1, 1, 2, 3, 7, 9 ]
+```
 
 ##### Benchmark
 
