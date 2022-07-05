@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/sort-algorithms-js.svg)](https://www.npmjs.com/package/sort-algorithms-js) [![npm](https://img.shields.io/npm/dm/sort-algorithms-js.svg)](https://www.npmjs.com/package/sort-algorithms-js) [![npm](https://img.shields.io/badge/node-%3E=%206.0-blue.svg)](https://www.npmjs.com/package/sort-algorithms-js)
 
-soft algorithms implementation with ability to use a compare callback similar to javascript `.sort`.
+sort algorithms implementation with ability to use a compare callback similar to javascript `.sort`.
 
 ## Contents
   * [Install](#install)
@@ -28,7 +28,8 @@ npm install --save sort-algorithms-js
 ### require
 ```js
 const {
-  bubbleSort, selectionSort, insertionSort, radixSort,
+  bubbleSort, insertionSort,
+  selectionSort, radixSort,
   mergeSort, heapSort, quickSort
 } = require('sort-algorithms-js');
 ```
@@ -36,7 +37,8 @@ const {
 ### import
 ```js
 import {
-  bubbleSort, selectionSort, insertionSort, radixSort,
+  bubbleSort, insertionSort,
+  selectionSort, radixSort,
   mergeSort, heapSort, quickSort
 } from 'sort-algorithms-js';
 ```
