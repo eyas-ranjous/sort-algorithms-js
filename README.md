@@ -44,7 +44,7 @@ import {
 ### API
 
 #### bubbleSort
-O(n^2)
+runtime complexity: O(n^2)
 
 ```js
 bubbleSort([2, 1, 7, 3, 9, -1, -5], (a, b) => a - b); // [ -5, -1, 1, 2, 3, 7, 9 ]
@@ -63,6 +63,12 @@ bubbleSort([2, 1, 7, 3, 9, -1, -5], (a, b) => a - b); // [ -5, -1, 1, 2, 3, 7, 9
 </table>
 
 #### selectionSort
+runtime complexity: O(n^2)
+
+```js
+selectionSort([2, 1, 7, 3, 9, -1, -5], (a, b) => a - b); // [ -5, -1, 1, 2, 3, 7, 9 ]
+```
+
 ##### Benchmark
 <table>
   <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
@@ -73,6 +79,12 @@ bubbleSort([2, 1, 7, 3, 9, -1, -5], (a, b) => a - b); // [ -5, -1, 1, 2, 3, 7, 9
 </table>
 
 #### insertionSort
+O(n^2)
+
+```js
+selectionSort([2, 1, 7, 3, 9, -1, -5], (a, b) => a - b); // [ -5, -1, 1, 2, 3, 7, 9 ]
+```
+
 ##### Benchmark
 <table>
   <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
@@ -83,6 +95,8 @@ bubbleSort([2, 1, 7, 3, 9, -1, -5], (a, b) => a - b); // [ -5, -1, 1, 2, 3, 7, 9
 </table>
 
 #### radixSort
+Only sorts numbers in O(n*d) runtime : d is the number of digits in the largest number.
+
 ##### Benchmark
 <table>
   <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
