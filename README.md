@@ -46,12 +46,15 @@ import {
 #### bubbleSort
 
 ##### Benchmark
+
 <table>
+  <tr><td align="center" cellspan="3">Node v14</td></tr>
   <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
-  <tr><td>10k</td><td></td><td></td></tr>
-  <tr><td>50k</td><td></td><td></td></tr>
-  <tr><td>100k</td><td></td><td></td></tr>
-  <tr><td>1M</td><td></td><td></td></tr>
+  <tr><td>1k</td><td>0 seconds 5 ms</td><td>0 seconds 9 ms</td></tr>
+  <tr><td>10k</td><td>0 seconds 227 ms</td>0 seconds 249 ms<td></td></tr>
+  <tr><td>50k</td><td>6 seconds 411 ms</td><td>7 seconds 998 ms</td></tr>
+  <tr><td>100k</td><td>26 seconds 653 ms</td><td>29 seconds 735 ms</td></tr>
+  <tr><td>1M</td><td align="center" colspan="2">❌</td></tr>
 </table>
 
 #### selectionSort
