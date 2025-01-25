@@ -6,7 +6,6 @@ A lightweight JavaScript library that provides multiple sorting algorithms with 
 
 ## Table of Contents
 
-- [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
   - [require](#require)
@@ -22,14 +21,6 @@ A lightweight JavaScript library that provides multiple sorting algorithms with 
 - [Build](#build)
 - [Benchmarking](#benchmarking)
 - [License](#license)
-
-## Features
-
-- **Multiple Sorting Algorithms**: bubble sort, insertion sort, selection sort, radix sort, heap sort, merge sort, quick sort
-- **Custom Compare Function**: `(a, b) => number` for ascending/descending or complex data
-- **Benchmarks** for each algorithm (Node v14)
-- **Zero Dependencies**
-- **Works in Node.js v6+**
 
 ## Installation
 
@@ -257,9 +248,9 @@ node test/benchmark.js \
   --iterations 5
 ```
 
-- ``: The size of the randomly generated array.
-- ``: One of the supported algorithms (e.g., `bubbleSort`, `quickSort`, `heapSort`, etc.).
-- `` *(optional)*: How many times to repeat the test.
+- `size`: The size of the randomly generated array.
+- `algorithm`: One of the supported algorithms (e.g., `bubbleSort`, `quickSort`, `heapSort`, etc.).
+- `iterations` *(optional)*: How many times to repeat the test.
 
 **Example Output**:
 
