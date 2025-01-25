@@ -12,7 +12,7 @@ const {
   heapSort,
   quickSort,
   mergeSort
-} = require('./lib/factory');
+} = require('./lib');
 
 exports.bubbleSort = bubbleSort;
 exports.insertionSort = insertionSort;

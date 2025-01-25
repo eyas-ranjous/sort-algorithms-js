@@ -1,196 +1,276 @@
-<img width="320" alt="aljs" src="https://user-images.githubusercontent.com/6517308/80581008-1a8ff180-89d2-11ea-9126-25e91a00da6d.png">
+# sort-algorithms-js
 
-[![npm](https://img.shields.io/npm/v/sort-algorithms-js.svg)](https://www.npmjs.com/package/sort-algorithms-js) [![npm](https://img.shields.io/npm/dm/sort-algorithms-js.svg)](https://www.npmjs.com/package/sort-algorithms-js) [![npm](https://img.shields.io/badge/node-%3E=%206.0-blue.svg)](https://www.npmjs.com/package/sort-algorithms-js)
+[![npm](https://img.shields.io/npm/v/sort-algorithms-js.svg)](https://www.npmjs.com/package/sort-algorithms-js) [![npm](https://img.shields.io/npm/dm/sort-algorithms-js.svg)](https://www.npmjs.com/package/sort-algorithms-js)
 
-sort algorithms implementation with ability to use a compare callback similar to javascript `.sort`.
+A lightweight JavaScript library that provides multiple sorting algorithms with a unified API. You can optionally pass a **compare callback** similar to JavaScript’s native `Array.sort`.
 
-## Contents
-  * [Install](#install)
-  * [require](#require)
-  * [import](#import)
-  * [API](#api)
-    * [bubbleSort](#bubbleSort)
-    * [insertionSort](#insertionSort)
-    * [selectionSort](#selectionSort)
-    * [radixSort](#radixSort)
-    * [heapSort](#heapSort)
-    * [mergeSort](#mergeSort)
-    * [quickSort](#quickSort)
-  * [Build](#build)
-  * [License](#license)
+## Table of Contents
 
-### Install
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [require](#require)
+  - [import](#import)
+- [API](#api)
+  - [bubbleSort](#bubblesort)
+  - [insertionSort](#insertionsort)
+  - [selectionSort](#selectionsort)
+  - [radixSort](#radixsort)
+  - [heapSort](#heapsort)
+  - [mergeSort](#mergesort)
+  - [quickSort](#quicksort)
+- [Build](#build)
+- [Benchmarking](#benchmarking)
+- [License](#license)
 
-```sh
+## Features
+
+- **Multiple Sorting Algorithms**: bubble sort, insertion sort, selection sort, radix sort, heap sort, merge sort, quick sort
+- **Custom Compare Function**: `(a, b) => number` for ascending/descending or complex data
+- **Benchmarks** for each algorithm (Node v14)
+- **Zero Dependencies**
+- **Works in Node.js v6+**
+
+## Installation
+
+```bash
 npm install --save sort-algorithms-js
 ```
 
+## Usage
+
 ### require
+
 ```js
 const {
-  bubbleSort, insertionSort,
-  selectionSort, radixSort,
-  mergeSort, heapSort, quickSort
+  bubbleSort,
+  insertionSort,
+  selectionSort,
+  radixSort,
+  mergeSort,
+  heapSort,
+  quickSort
 } = require('sort-algorithms-js');
+
+const arr = [2, 1, 7, 3, 9, -1, -5];
+console.log(bubbleSort(arr)); // [ -5, -1, 1, 2, 3, 7, 9 ]
+
+// with a compare function for descending
+console.log(insertionSort(arr, (a, b) => b - a)); // [ 9, 7, 3, 2, 1, -1, -5 ]
 ```
 
 ### import
+
 ```js
 import {
-  bubbleSort, insertionSort,
-  selectionSort, radixSort,
-  mergeSort, heapSort, quickSort
+  bubbleSort,
+  insertionSort,
+  selectionSort,
+  radixSort,
+  mergeSort,
+  heapSort,
+  quickSort
 } from 'sort-algorithms-js';
+
+const arr = [2, 1, 7, 3, 9, -1, -5];
+console.log(quickSort(arr)); // [ -5, -1, 1, 2, 3, 7, 9 ]
 ```
 
-### API
+## API
 
-#### bubbleSort
-runtime complexity: O(n^2)
+Each function sorts an array **in-place** and returns the same array.\
+**Signature**:
+
+```ts
+function algorithmName<T>(
+  list: T[],
+  compare?: (a: T, b: T) => number
+): T[];
+```
+
+- `list`: The array to sort.
+- `compare`: An optional function that returns `>0` if `a>b`, `<0` if `a<b`, or `0` if equal.
+
+### bubbleSort
+
+- **Time Complexity**: O(n²)
 
 ```js
-bubbleSort([2, 1, 7, 3, 9, -1, -5]); // [ -5, -1, 1, 2, 3, 7, 9 ]
-bubbleSort([2, 1, 7, 3, 9, -1, -5], (a, b) => b - a); // [ 9, 7, 3, 2, 1, -1, -5 ]
+bubbleSort([2, 1, 7, 3, 9, -1, -5]);
+bubbleSort([2, 1, 7, 3, 9, -1, -5], (a, b) => b - a);
 ```
 
-##### Benchmark
-<table>
-  <tr><td align="center" colspan="3">Node v14</td></tr>
-  <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
-  <tr><td>1k</td><td>0 seconds 5 ms</td><td>0 seconds 9 ms</td></tr>
-  <tr><td>10k</td><td>0 seconds 227 ms</td><td>0 seconds 249 ms</td></tr>
-  <tr><td>50k</td><td>6 seconds 411 ms</td><td>7 seconds 998 ms</td></tr>
-  <tr><td>100k</td><td>26 seconds 653 ms</td><td>29 seconds 735 ms</td></tr>
-  <tr><td>1M</td><td align="center" colspan="2">❌</td></tr>
-</table>
+**Benchmark (Node v14)**
 
-#### insertionSort
-runtime complexity: O(n^2)
+| input size | best time | worst time |
+| ---------- | --------- | ---------- |
+| 1k         | 0s 5ms    | 0s 9ms     |
+| 10k        | 0s 227ms  | 0s 249ms   |
+| 50k        | 6s 411ms  | 7s 998ms   |
+| 100k       | 26s 653ms | 29s 735ms  |
+| 1M         | ❌         | ❌          |
+
+
+### insertionSort
+
+- **Time Complexity**: O(n²)
 
 ```js
-insertionSort([2, 1, 7, 3, 9, -1, -5]); // [ -5, -1, 1, 2, 3, 7, 9 ]
-insertionSort([2, 1, 7, 3, 9, -1, -5], (a, b) => b - a); // [ 9, 7, 3, 2, 1, -1, -5 ]
+insertionSort([2, 1, 7, 3, 9, -1, -5]);
+insertionSort([2, 1, 7, 3, 9, -1, -5], (a, b) => b - a);
 ```
 
-##### Benchmark
-<table>
-  <tr><td align="center" colspan="3">Node v14</td></tr>
-  <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
-  <tr><td>1k</td><td>0 seconds 5 ms</td><td>0 seconds 10 ms</td></tr>
-  <tr><td>10k</td><td>0 seconds 129 ms</td><td>0 seconds 145 ms</td></tr>
-  <tr><td>50k</td><td>3 seconds 49 ms</td><td>3 seconds 596 ms</td></tr>
-  <tr><td>100k</td><td>13 seconds 575 ms</td><td>16 seconds 876 ms</td></tr>
-  <tr><td>1M</td><td align="center" colspan="2">❌</td></tr>
-</table>
+**Benchmark (Node v14)**
 
-#### selectionSort
-runtime complexity: O(n^2)
+| input size | best time | worst time |
+| ---------- | --------- | ---------- |
+| 1k         | 0s 5ms    | 0s 10ms    |
+| 10k        | 0s 129ms  | 0s 145ms   |
+| 50k        | 3s 49ms   | 3s 596ms   |
+| 100k       | 13s 575ms | 16s 876ms  |
+| 1M         | ❌         | ❌          |
+
+### selectionSort
+
+- **Time Complexity**: O(n²)
 
 ```js
-selectionSort([2, 1, 7, 3, 9, -1, -5]); // [ -5, -1, 1, 2, 3, 7, 9 ]
-selectionSort([2, 1, 7, 3, 9, -1, -5], (a, b) => b - a); // [ 9, 7, 3, 2, 1, -1, -5 ]
+selectionSort([2, 1, 7, 3, 9, -1, -5]);
+selectionSort([2, 1, 7, 3, 9, -1, -5], (a, b) => b - a);
 ```
 
-##### Benchmark
-<table>
-  <tr><td align="center" colspan="3">Node v14</td></tr>
-  <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
-  <tr><td>1k</td><td>0 seconds 4 ms</td><td>0 seconds 8 ms</td></tr>
-  <tr><td>10k</td><td>0 seconds 125 ms</td><td>0 seconds 139 ms</td></tr>
-  <tr><td>50k</td><td>2 seconds 178 ms</td><td>2 seconds 302 ms</td></tr>
-  <tr><td>100k</td><td>9 seconds 740 ms</td><td>10 seconds 460 ms</td></tr>
-  <tr><td>1M</td><td align="center" colspan="2">❌</td></tr>
-</table>
+**Benchmark (Node v14)**
 
-#### radixSort
-Only sorts numbers in O(n*d) runtime : d is the number of digits in the largest number.
+| input size | best time | worst time |
+| ---------- | --------- | ---------- |
+| 1k         | 0s 4ms    | 0s 8ms     |
+| 10k        | 0s 125ms  | 0s 139ms   |
+| 50k        | 2s 178ms  | 2s 302ms   |
+| 100k       | 9s 740ms  | 10s 460ms  |
+| 1M         | ❌         | ❌          |
+
+### radixSort
+
+Only sorts numeric data.
+
+- **Time Complexity**: O(n × d)
 
 ```js
-radixSort([2, 1, 7, 3, 9, -1, -5]); // [ -5, -1, 1, 2, 3, 7, 9 ]
-radixSort([2, 1, 7, 3, 9, -1, -5], 'desc'); // [ 9, 7, 3, 2, 1, -1, -5 ]
-radixSort([{ id: 341 }, { id: 947 }, { id: 132 }], 'asc', (obj) => obj.id); // [ { id: 132 }, { id: 341 }, { id: 947 } ]
-radixSort([{ id: 341 }, { id: 947 }, { id: 132 }], 'desc', (obj) => obj.id); // [ { id: 947 }, { id: 341 }, { id: 132 } ]
+// ascending
+radixSort([2, 1, 7, 3, 9, -1, -5]);
+
+// descending
+radixSort([2, 1, 7, 3, 9, -1, -5], 'desc');
+
+// custom numeric extraction
+radixSort([{ id: 341 }, { id: 947 }, { id: 132 }], 'asc', (obj) => obj.id);
 ```
 
-##### Benchmark
-<table>
-  <tr><td align="center" colspan="3">Node v14</td></tr>
-  <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
-  <tr><td>10k</td><td>0 seconds 21 ms</td><td>0 seconds 30 ms</td></tr>
-  <tr><td>50k</td><td>0 seconds 61 ms</td><td>0 seconds 81 ms</td></tr>
-  <tr><td>100k</td><td>0 seconds 97 ms</td><td>0 seconds 115 ms</td></tr>
-  <tr><td>1M</td><td>1 seconds 27 ms</td><td>1 seconds 103 ms</td></tr>
-  <tr><td>10M</td><td>13 seconds 844 ms</td><td>17 seconds 257 ms</td></tr>
-  <tr><td>50M</td><td align="center" colspan="2">❌</td></tr>
-</table>
+**Benchmark (Node v14)**
 
-#### heapSort
-runtime complexity: O(n*log(n))
+| input size | best time | worst time |
+| ---------- | --------- | ---------- |
+| 10k        | 0s 21ms   | 0s 30ms    |
+| 50k        | 0s 61ms   | 0s 81ms    |
+| 100k       | 0s 97ms   | 0s 115ms   |
+| 1M         | 1s 27ms   | 1s 103ms   |
+| 10M        | 13s 844ms | 17s 257ms  |
+| 50M        | ❌         | ❌          |
+
+### heapSort
+
+- **Time Complexity**: O(n log n)
 
 ```js
-heapSort([2, 1, 7, 3, 9, -1, -5]); // [ -5, -1, 1, 2, 3, 7, 9 ]
-heapSort([2, 1, 7, 3, 9, -1, -5], (a, b) => b - a); // [ 9, 7, 3, 2, 1, -1, -5 ]
+heapSort([2, 1, 7, 3, 9, -1, -5]);
+heapSort([2, 1, 7, 3, 9, -1, -5], (a, b) => b - a);
 ```
 
-##### Benchmark
-<table>
-  <tr><td align="center" colspan="3">Node v14</td></tr>
-  <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
-  <tr><td>10k</td><td>0 seconds 12 ms</td><td>0 seconds 14 ms</td></tr>
-  <tr><td>50k</td><td>0 seconds 21 ms</td><td>0 seconds 25 ms</td></tr>
-  <tr><td>100k</td><td>0 seconds 31 ms</td><td>0 seconds 44 ms</td></tr>
-  <tr><td>1M</td><td>0 seconds 283 ms</td><td>0 seconds 313 ms</td></tr>
-  <tr><td>10M</td><td>5 seconds 219 ms</td><td>6 seconds 367 ms</td></tr>
-  <tr><td>50M</td><td>34 seconds 21 ms</td><td>46 seconds 167 ms</td></tr>
-  <tr><td>100M</td><td>76 seconds 485 ms</td><td>87 seconds 991 ms</td></tr>
-</table>
+**Benchmark (Node v14)**
 
-#### mergeSort
-runtime complexity: O(n*log(n))
+| input size | best time | worst time |
+| ---------- | --------- | ---------- |
+| 10k        | 0s 12ms   | 0s 14ms    |
+| 50k        | 0s 21ms   | 0s 25ms    |
+| 100k       | 0s 31ms   | 0s 44ms    |
+| 1M         | 0s 283ms  | 0s 313ms   |
+| 10M        | 5s 219ms  | 6s 367ms   |
+| 50M        | 34s 21ms  | 46s 167ms  |
+| 100M       | 76s 485ms | 87s 991ms  |
+
+### mergeSort
+
+- **Time Complexity**: O(n log n)
 
 ```js
-mergeSort([2, 1, 7, 3, 9, -1, -5]); // [ -5, -1, 1, 2, 3, 7, 9 ]
-mergeSort([2, 1, 7, 3, 9, -1, -5], (a, b) => b - a); // [ 9, 7, 3, 2, 1, -1, -5 ]
+mergeSort([2, 1, 7, 3, 9, -1, -5]);
+mergeSort([2, 1, 7, 3, 9, -1, -5], (a, b) => b - a);
 ```
 
-##### Benchmark
-<table>
-  <tr><td align="center" colspan="3">Node v14</td></tr>
-  <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
-  <tr><td>10k</td><td>0 seconds 16 ms</td><td>0 seconds 23 ms</td></tr>
-  <tr><td>50k</td><td>0 seconds 38 ms</td><td>0 seconds 45 ms</td></tr>
-  <tr><td>100k</td><td>0 seconds 54 ms</td><td>0 seconds 60 ms</td></tr>
-  <tr><td>1M</td><td>0 seconds 413 ms</td><td>0 seconds 435 ms</td></tr>
-  <tr><td>10M</td><td>5 seconds 78 ms</td><td>6 seconds 712 ms</td></tr>
-  <tr><td>50M</td><td>33 seconds 229 ms</td><td>35 seconds 659 ms</td></tr>
-  <tr><td>100M</td><td>82 seconds 777 ms</td><td>86 seconds 194 ms</td></tr>
-</table>
+**Benchmark (Node v14)**
 
-#### quickSort
-runtime complexity: O(n*log(n))
+| input size | best time | worst time |
+| ---------- | --------- | ---------- |
+| 10k        | 0s 16ms   | 0s 23ms    |
+| 50k        | 0s 38ms   | 0s 45ms    |
+| 100k       | 0s 54ms   | 0s 60ms    |
+| 1M         | 0s 413ms  | 0s 435ms   |
+| 10M        | 5s 78ms   | 6s 712ms   |
+| 50M        | 33s 229ms | 35s 659ms  |
+| 100M       | 82s 777ms | 86s 194ms  |
+
+### quickSort
+
+- **Time Complexity**: O(n log n) (average)
 
 ```js
-quickSort([2, 1, 7, 3, 9, -1, -5]); // [ -5, -1, 1, 2, 3, 7, 9 ]
-quickSort([2, 1, 7, 3, 9, -1, -5], (a, b) => b - a); // [ 9, 7, 3, 2, 1, -1, -5 ]
+quickSort([2, 1, 7, 3, 9, -1, -5]);
+quickSort([2, 1, 7, 3, 9, -1, -5], (a, b) => b - a);
 ```
 
-##### Benchmark
-<table>
-  <tr><td align="center" colspan="3">Node v14</td></tr>
-  <tr><td align="center"><b>input size</b></td><td align="center"><b>best time</b></td><td align="center"><b>worst time</b></td></tr>
-  <tr><td>10k</td><td>0 seconds 6 ms</td><td>0 seconds 13 ms</td></tr>
-  <tr><td>50k</td><td>0 seconds 18 ms</td><td>0 seconds 26 ms</td></tr>
-  <tr><td>100k</td><td>0 seconds 26 ms</td><td>0 seconds 34 ms</td></tr>
-  <tr><td>1M</td><td>0 seconds 167 ms</td><td>0 seconds 187 ms</td></tr>
-  <tr><td>10M</td><td>1 seconds 831 ms</td><td>2 seconds 188 ms</td></tr>
-  <tr><td>50M</td><td>10 seconds 402 ms</td><td>14 seconds 777 ms</td></tr>
-  <tr><td>100M</td><td>24 seconds 253 ms</td><td>34 seconds 705 ms</td></tr>
-</table>
+**Benchmark (Node v14)**
+
+| input size | best time | worst time |
+| ---------- | --------- | ---------- |
+| 10k        | 0s 6ms    | 0s 13ms    |
+| 50k        | 0s 18ms   | 0s 26ms    |
+| 100k       | 0s 26ms   | 0s 34ms    |
+| 1M         | 0s 167ms  | 0s 187ms   |
+| 10M        | 1s 831ms  | 2s 188ms   |
+| 50M        | 10s 402ms | 14s 777ms  |
+| 100M       | 24s 253ms | 34s 705ms  |
 
 ## Build
-```
+
+```bash
 grunt build
 ```
 
+## Benchmarking
+
+If you’d like to benchmark a specific sorting algorithm on random data, use the included `benchmark.js` script:
+
+```bash
+node test/benchmark.js \
+  --size 100000 \
+  --algorithm heapSort \
+  --iterations 5
+```
+
+- ``: The size of the randomly generated array.
+- ``: One of the supported algorithms (e.g., `bubbleSort`, `quickSort`, `heapSort`, etc.).
+- `` *(optional)*: How many times to repeat the test.
+
+**Example Output**:
+
+```
+heapSort: 0 seconds 51 ms
+heapSort: 0 seconds 44 ms
+heapSort: 0 seconds 52 ms
+```
+
+This script creates a random array of the specified size, times the sorting operation (using [timer-node](https://www.npmjs.com/package/timer-node)), and repeats that process for a given number of iterations. It’s a quick way to compare the relative performance of different sorting algorithms on your machine.
+
 ## License
-The MIT License. Full License is [here](https://github.com/eyas-ranjous/sort-algorithms-js/blob/master/LICENSE)
+
+[MIT License](https://github.com/eyas-ranjous/sort-algorithms-js/blob/master/LICENSE)
